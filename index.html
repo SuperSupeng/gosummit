@@ -393,8 +393,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ——— footer ——— */
 footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
-.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;width:80vw;margin:0 auto 50px}
-.f-grid h4{color:var(--fg);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;width:80vw;margin:0 auto 50px;align-items:start}
+.f-grid > div{display:flex;flex-direction:column;align-items:flex-start}
+.f-grid h4{color:var(--fg);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 18px}
 .f-grid ul{list-style:none;display:grid;gap:10px}
 .f-grid a:hover{color:var(--fg)}
 .f-grid .sub{color:var(--fg-soft);max-width:360px;line-height:1.6;margin-top:10px}
