@@ -162,11 +162,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .hero-sub{
   display:grid;grid-template-columns:1.2fr .8fr;gap:40px;
-  margin-top:40px;align-items:end;
+  margin-top:16px;align-items:end;
 }
 .hero-lede{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,2vw,28px);line-height:1.35;max-width:560px;color:var(--fg)}
 .hero-lede span{font-style:normal;color:var(--fg-soft)}
-.hero-meta{display:flex;gap:42px;color:var(--fg-soft);font-size:13px;justify-content:flex-end}
+.hero-meta{
+  display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));
+  gap:16px 34px;color:var(--fg-soft);font-size:13px;justify-content:flex-end;
+}
 .hero-meta b{display:block;color:var(--fg);font-size:34px;font-family:var(--serif);font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
 .hero-meta b em{font-style:italic;color:var(--accent);font-weight:500}
 
@@ -337,7 +340,7 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   .p-wall div:nth-child(3n){border-right:0}
   .f-grid{grid-template-columns:1fr 1fr;gap:30px}
   .hero-sub{grid-template-columns:1fr}
-  .hero-meta{justify-content:flex-start}
+  .hero-meta{grid-template-columns:repeat(2,minmax(120px,1fr));justify-content:flex-start}
   .nav ul{display:none}
   .wordmark .sep{display:none}
 }
@@ -384,6 +387,21 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 
   <div class="hero-justgo reveal"><img src="assets/just-go-logo.png" alt="Just GO" /></div>
 
+  <div class="hero-sub">
+    <p class="hero-lede reveal">
+      A year-long expedition for founders building the next global category —
+      <span>from China, with the world.</span>
+    </p>
+    <div class="hero-meta reveal">
+      <div><b>12</b><span>cities</span></div>
+      <div><b>12</b><span>months</span></div>
+      <div><b>5,000<em>+</em></b><span>founders</span></div>
+      <div><b>600<em>+</em></b><span>investors</span></div>
+      <div><b>30</b><span>markets</span></div>
+      <div><b>100M<em>+</em></b><span>content impressions</span></div>
+    </div>
+  </div>
+
   <div class="photo-wall reveal" aria-label="GO Summit event photo wall">
     <div class="photo-track">
       <div class="photo-item"><img src="assets/photos/1.png" alt="GO Summit event photo 1" /></div>
@@ -428,17 +446,6 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
     </div>
   </div>
 
-  <div class="hero-sub">
-    <p class="hero-lede reveal">
-      A year-long expedition for founders building the next global category —
-      <span>from China, with the world.</span>
-    </p>
-    <div class="hero-meta reveal">
-      <div><b>9</b><span>cities</span></div>
-      <div><b>12</b><span>months</span></div>
-      <div><b>2,000<em>+</em></b><span>founders</span></div>
-    </div>
-  </div>
 </header>
 
 <!-- MANIFESTO -->
