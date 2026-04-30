@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GO SUMMIT Agenda — Shenzhen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;
+  --fg:#f5f5f7;
+  --fg-soft:#a1a1a6;
+  --line:rgba(255,255,255,.1);
+  --accent:#e8740c;
+  --glass:rgba(10,10,10,.65);
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+  --gutter:10vw;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6}
+a{color:inherit;text-decoration:none}
+
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  background:var(--glass);border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  width:80vw;margin:0 auto;padding:14px 0;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.wordmark{display:inline-flex;align-items:center;gap:10px}
+.wordmark img{height:34px;width:auto;display:block}
+.wordmark .sep{
+  display:inline-block;margin-left:10px;padding-left:12px;border-left:1px solid var(--line);
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-soft);font-weight:500;
+}
+.nav ul{display:flex;gap:30px;list-style:none;color:var(--fg-soft)}
+.nav ul a{font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+.nav ul a.active,.nav ul a:hover{color:var(--fg)}
+.lang{display:flex;gap:4px;color:var(--fg-soft);font-size:13px;align-items:center}
+.lang button{padding:4px 10px;border-radius:6px;border:0;background:none;color:inherit}
+.lang button[aria-current="true"]{background:var(--fg);color:#000}
+
+main{padding:130px var(--gutter) 90px}
+.hero{
+  border-bottom:1px solid var(--line);
+  padding-bottom:34px;margin-bottom:34px;
+}
+.hero h1{
+  font-family:var(--serif);font-size:clamp(42px,6vw,84px);line-height:.95;letter-spacing:-.02em;
+}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{margin-top:16px;color:var(--fg-soft);font-size:18px;max-width:760px}
+
+.city-strip{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  overflow:auto;padding:22px 0;margin-bottom:34px;
+  scrollbar-width:none;
+}
+.city-strip::-webkit-scrollbar{display:none}
+.city-track{display:flex;width:max-content}
+.city-btn{
+  border:0;background:none;color:var(--fg);cursor:pointer;
+  display:flex;align-items:baseline;gap:14px;
+  padding:0 34px;border-right:1px solid var(--line);white-space:nowrap;
+}
+.city-btn .m{
+  font-family:var(--serif);font-style:italic;font-size:clamp(30px,3.2vw,46px);
+  color:var(--accent);line-height:1;
+}
+.city-btn .c{
+  font-family:var(--serif);font-size:clamp(34px,3.5vw,52px);
+  line-height:1;letter-spacing:-.02em;color:var(--fg);
+}
+.city-btn.active .c{color:var(--accent)}
+
+.agenda-card{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+  padding:34px 30px 26px;
+}
+.agenda-city{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:20px;
+  border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:26px;
+}
+.agenda-city h2{font-family:var(--serif);font-size:clamp(34px,4vw,56px);letter-spacing:-.02em}
+.agenda-city span{color:var(--fg-soft);text-transform:uppercase;letter-spacing:.18em;font-size:12px}
+
+.session + .session{margin-top:28px}
+.session h3{
+  font-family:var(--serif);font-size:clamp(24px,2.6vw,36px);letter-spacing:-.01em;line-height:1.2;
+}
+.session h3 em{font-style:italic;color:var(--accent);font-weight:500}
+.session .focus{
+  margin-top:8px;color:var(--fg-soft);font-size:16px;border-left:2px solid var(--accent);
+  padding-left:12px;
+}
+.session ul{margin-top:14px;padding-left:22px;display:grid;gap:8px}
+.session li{font-size:18px;line-height:1.6}
+
+@media (max-width:1024px){
+  .nav ul{display:none}
+  .wordmark .sep{display:none}
+}
+@media (max-width:600px){
+  :root{--gutter:6vw}
+  main{padding-top:110px}
+  .agenda-card{padding:24px 18px}
+  .city-btn{padding:0 22px}
+  .city-btn .m{font-size:24px}
+  .city-btn .c{font-size:34px}
+  .session li{font-size:16px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="wordmark"><img src="../assets/go-summit-logo.png" alt="GO Summit" /><span class="sep">WORLD TOUR 2026-2027</span></a>
+    <ul>
+      <li><a href="/#about">ABOUT</a></li>
+      <li><a class="active" href="/agenda">AGENDA</a></li>
+      <li><a href="/#voices">SPEAKERS</a></li>
+      <li><a href="/#partners">PARTNERS</a></li>
+      <li><a href="/#apply">ATTEND</a></li>
+      <li><a href="/#contact">CONTACT</a></li>
+    </ul>
+    <div class="lang">
+      <button aria-current="true">EN</button>
+      <button>中</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <h1>GO SUMMIT <em>Agenda</em></h1>
+    <p>City-by-city program overview. Select a stop to view the detailed session agenda. Default starts from Shenzhen.</p>
+  </section>
+
+  <section class="city-strip" aria-label="Agenda city selector">
+    <div class="city-track">
+      <button class="city-btn active" data-city="shenzhen"><span class="m">May</span><span class="c">Shenzhen</span></button>
+      <button class="city-btn" data-city="singapore-jun"><span class="m">Jun</span><span class="c">Singapore</span></button>
+      <button class="city-btn" data-city="shanghai-jul"><span class="m">Jul</span><span class="c">Shanghai</span></button>
+      <button class="city-btn" data-city="hongkong"><span class="m">Aug</span><span class="c">Hongkong</span></button>
+      <button class="city-btn" data-city="hangzhou"><span class="m">Sep</span><span class="c">Hangzhou</span></button>
+      <button class="city-btn" data-city="singapore-oct"><span class="m">Oct</span><span class="c">Singapore</span></button>
+      <button class="city-btn" data-city="shenzhen-nov"><span class="m">Nov</span><span class="c">Shenzhen</span></button>
+      <button class="city-btn" data-city="dubai"><span class="m">Dec</span><span class="c">Dubai</span></button>
+      <button class="city-btn" data-city="shanghai-apr"><span class="m">Apr</span><span class="c">Shanghai</span></button>
+    </div>
+  </section>
+
+  <section class="agenda-card">
+    <div class="agenda-city">
+      <h2 id="agenda-title">Shenzhen Agenda</h2>
+      <span id="agenda-subtitle">May · Full Day Program</span>
+    </div>
+
+    <div id="agenda-content"></div>
+  </section>
+</main>
+
+<script>
+const agendaData = {
+  shenzhen: [
+    {
+      title: "Morning — Global Forum <em>(10:00 - 12:30 · English Session)</em>",
+      focus: "Focus: Global AI entrepreneurship · Tech innovation · New opportunities for going global",
+      items: [
+        "Why the World Is Watching China's Next Wave",
+        "What Western Pre-Seed VCs Actually Diligence",
+        "Global Equity Structure Design and Tariff Compliance Breakdown",
+        "A Clash of Global Perspectives on China's AI Hardware Development"
+      ]
+    },
+    {
+      title: "Afternoon — Go Global Forum <em>(14:00 - 18:00 · Chinese Session)</em>",
+      focus: "Focus: Geopolitical insights for going global · Hardware globalization · Growth in practice",
+      items: [
+        "AI-Native Talkshow",
+        "2026 Geopolitical Trends and Outbound Expansion Insights",
+        "Over $800K in Crowdfunding in One Year, Tens of Millions in Financing, Mass Production and Shipment - Reflections on the Tennis Robot Startup Journey",
+        "North American Hardware Expansion: Building a GTM Closed-Loop for High-Speed Growth from Millions to Billions",
+        "A User Insight Arsenal for China's Hardware Tech Entrepreneurs",
+        "How to Be an Effective PM-Type CEO",
+        "AI Hardware Global Expansion: The Next Big Opportunity",
+        "AI Agent & AIGC Automated Workflows: Influence on Traditional Industries"
+      ]
+    }
+  ],
+  "singapore-jun": [],
+  "shanghai-jul": [],
+  hongkong: [],
+  hangzhou: [],
+  "singapore-oct": [],
+  "shenzhen-nov": [],
+  dubai: [],
+  "shanghai-apr": []
+};
+
+const cityMeta = {
+  shenzhen: {title: "Shenzhen Agenda", sub: "May · Full Day Program"},
+  "singapore-jun": {title: "Singapore Agenda", sub: "June · Program Coming Soon"},
+  "shanghai-jul": {title: "Shanghai Agenda", sub: "July · Program Coming Soon"},
+  hongkong: {title: "Hongkong Agenda", sub: "August · Program Coming Soon"},
+  hangzhou: {title: "Hangzhou Agenda", sub: "September · Program Coming Soon"},
+  "singapore-oct": {title: "Singapore Agenda", sub: "October · Program Coming Soon"},
+  "shenzhen-nov": {title: "Shenzhen Agenda", sub: "November · Program Coming Soon"},
+  dubai: {title: "Dubai Agenda", sub: "December · Program Coming Soon"},
+  "shanghai-apr": {title: "Shanghai Agenda", sub: "April · Program Coming Soon"}
+};
+
+const titleEl = document.getElementById("agenda-title");
+const subEl = document.getElementById("agenda-subtitle");
+const contentEl = document.getElementById("agenda-content");
+const buttons = document.querySelectorAll(".city-btn");
+
+function renderAgenda(city) {
+  const meta = cityMeta[city];
+  titleEl.textContent = meta.title;
+  subEl.textContent = meta.sub;
+  const sections = agendaData[city];
+
+  if (!sections || sections.length === 0) {
+    contentEl.innerHTML = `
+      <div class="session">
+        <h3>Detailed agenda is <em>coming soon</em></h3>
+        <p class="focus">We are finalizing speakers, sessions, and partner programming for this city stop.</p>
+      </div>
+    `;
+    return;
+  }
+
+  contentEl.innerHTML = sections.map(section => `
+    <article class="session">
+      <h3>${section.title}</h3>
+      <p class="focus">${section.focus}</p>
+      <ul>
+        ${section.items.map(item => `<li>${item}</li>`).join("")}
+      </ul>
+    </article>
+  `).join("");
+}
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(x => x.classList.remove("active"));
+    btn.classList.add("active");
+    renderAgenda(btn.dataset.city);
+  });
+});
+
+renderAgenda("shenzhen");
+</script>
+</body>
+</html>
