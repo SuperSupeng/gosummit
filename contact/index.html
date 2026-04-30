@@ -63,11 +63,12 @@ main{padding:130px var(--gutter) 90px}
 .card p{margin-top:10px;color:var(--fg-soft);font-size:16px}
 .card .action{margin-top:18px;display:inline-flex;padding:10px 16px;border:1px solid var(--line);border-radius:999px;font-size:14px}
 .card .photo{
-  margin-top:14px;border:1px solid var(--line);background:#0b0b0b;padding:6px;
+  margin-top:14px;
 }
-.card .photo img{width:100%;height:180px;object-fit:cover;display:block}
-.card .photo img.monica{object-position:center top}
-.card .photo img.darren{object-position:center bottom}
+.card .photo img{
+  width:100%;height:auto;display:block;
+  border-radius:2px;
+}
 
 @media (max-width:1024px){
   .nav ul{display:none}
@@ -112,14 +113,14 @@ main{padding:130px var(--gutter) 90px}
       <h2>Monica</h2>
       <p>For speaking invitations and stage participation, please connect with Monica.</p>
       <a class="action" href="mailto:monica@gosummit.ai?subject=Speaking%20Inquiry%20for%20Monica">monica@gosummit.ai</a>
-      <div class="photo"><img class="monica" src="../assets/contact-team.png" alt="Monica" /></div>
+      <div class="photo"><img class="monica" src="../assets/contact-monica.png" alt="Monica" /></div>
     </article>
     <article class="card">
       <div class="tag">Partner & Sponsor</div>
       <h2>Darren</h2>
       <p>For partnership and sponsor collaboration, please connect with Darren.</p>
       <a class="action" href="mailto:darren@gosummit.ai?subject=Partner%20%26%20Sponsor%20Inquiry%20for%20Darren">darren@gosummit.ai</a>
-      <div class="photo"><img class="darren" src="../assets/contact-team.png" alt="Darren" /></div>
+      <div class="photo"><img class="darren" src="../assets/contact-darren.png" alt="Darren" /></div>
     </article>
   </section>
 </main>
