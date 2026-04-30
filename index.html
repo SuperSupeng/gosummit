@@ -361,23 +361,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cta .kicker-big{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,88px);letter-spacing:-.025em;line-height:.98;color:var(--fg-soft);margin-bottom:28px;position:relative;font-style:italic}
 .cta .kicker-big em{font-style:italic;color:var(--fg);font-weight:400}
 .cta .slogan{
-  position:relative;display:inline-block;
-  width:min(720px,82vw);aspect-ratio:1024/391;
-  isolation:isolate;
+  position:relative;display:inline-block;max-width:min(720px,82vw);isolation:isolate
 }
-.cta .slogan::before{
-  content:"";
-  position:absolute;inset:0;
-  background:var(--fg);
-  -webkit-mask-image:url("assets/just-go-logo-transparent.png");
-  -webkit-mask-repeat:no-repeat;
-  -webkit-mask-size:contain;
-  -webkit-mask-position:center;
-  mask-image:url("assets/just-go-logo-transparent.png");
-  mask-repeat:no-repeat;
-  mask-size:contain;
-  mask-position:center;
-  filter:drop-shadow(0 20px 60px rgba(232,116,12,.28));
+.cta .slogan img{
+  width:100%;height:auto;display:block;
+  mix-blend-mode:screen;
+  filter:brightness(1.06) contrast(1.06) drop-shadow(0 20px 60px rgba(232,116,12,.28));
 }
 .cta p{color:var(--fg-soft);font-size:18px;max-width:520px;margin:28px auto 48px;position:relative;line-height:1.6}
 .cta-row{display:inline-flex;gap:14px;position:relative;flex-wrap:wrap;justify-content:center}
@@ -641,7 +630,7 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 <!-- CTA -->
 <section id="apply" class="cta">
   <div class="kicker-big reveal">Ready?</div>
-  <h2 class="slogan reveal" aria-label="Just GO — GO Summit"></h2>
+  <h2 class="slogan reveal"><img src="assets/just-go-logo-transparent.png" alt="Just GO — GO Summit" /></h2>
   <p class="reveal">Applications open for speakers, delegates and founding partners of the 2026 tour. Rolling review.</p>
   <div class="cta-row reveal">
     <a class="btn primary" href="#">Apply to Attend <span>→</span></a>
