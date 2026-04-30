@@ -66,8 +66,12 @@ main{padding:130px var(--gutter) 90px}
   margin-top:14px;
 }
 .card .photo img{
-  width:100%;height:auto;display:block;
-  border-radius:2px;
+  width:25%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  display:block;
+  border-radius:50%;
+  border:1px solid var(--line);
 }
 
 @media (max-width:1024px){
@@ -79,6 +83,7 @@ main{padding:130px var(--gutter) 90px}
   :root{--gutter:6vw}
   main{padding-top:108px}
   .hero p{font-size:16px}
+  .card .photo img{width:38%}
 }
 </style>
 </head>
