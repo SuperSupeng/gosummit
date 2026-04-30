@@ -307,13 +307,36 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ——— voices ——— */
 .voices{border-top:1px solid var(--line)}
-.v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.v{padding:36px;border:1px solid var(--line);border-radius:2px;min-height:260px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg, rgba(255,255,255,.015), transparent 60%)}
-.v q{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.4;letter-spacing:-.005em;quotes:"\201C" "\201D"}
-.v q::before{content:open-quote;color:var(--accent);margin-right:2px;font-size:1.1em}
-.v q::after{content:close-quote;color:var(--accent);margin-left:2px;font-size:1.1em}
-.v cite{font-style:normal;display:block;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);color:var(--fg-soft);font-size:13px}
-.v cite b{display:block;color:var(--fg);font-weight:500;margin-bottom:2px}
+.v-grid{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:26px 0;overflow:hidden;position:relative;
+  mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+}
+.v-track{
+  display:flex;gap:18px;width:max-content;
+  animation:voicesScroll 120s linear infinite;
+  will-change:transform;
+}
+.v-grid:hover .v-track{animation-play-state:paused}
+.v{
+  width:min(520px,58vw);
+  padding:34px 30px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  min-height:290px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.005) 55%, transparent);
+}
+.v q{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.42;letter-spacing:-.005em;quotes:"\201C" "\201D";color:#f2f2f4}
+.v q::before{content:open-quote;color:var(--accent);margin-right:2px;font-size:1.06em}
+.v q::after{content:close-quote;color:var(--accent);margin-left:2px;font-size:1.06em}
+.v cite{font-style:normal;display:block;margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--fg-soft);font-size:14px;letter-spacing:.02em}
+.v cite b{display:block;color:var(--fg);font-weight:600;margin-bottom:2px}
+@keyframes voicesScroll{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
 
 /* ——— partners ——— */
 .partners{border-top:1px solid var(--line);padding:120px var(--gutter)}
@@ -373,7 +396,8 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   .manifesto-grid{grid-template-columns:1fr;gap:32px}
   .stop{padding:0 36px;gap:18px}
   .format-grid{grid-template-columns:1fr}
-  .v-grid{grid-template-columns:1fr}
+  .v{width:min(560px,78vw);min-height:260px}
+  .v q{font-size:28px}
   .nums-grid{grid-template-columns:repeat(2,1fr)}
   .nums-grid > div:nth-child(2n){border-right:0}
   .p-wall{grid-template-columns:repeat(3,1fr)}
@@ -395,6 +419,8 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   .hero-justgo{width:min(170px,44vw);opacity:.24;margin-top:14px}
   .why-now{margin-top:30px;padding-top:30px}
   .why-copy{font-size:15px}
+  .v{width:84vw;padding:26px 22px;min-height:220px}
+  .v q{font-size:24px}
   .tour-head{flex-direction:column;align-items:flex-start;gap:20px}
   .tour-head .meta{text-align:left}
   .f-grid{grid-template-columns:1fr}
@@ -615,21 +641,62 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 <section id="voices" class="section voices">
   <div class="wrap">
     <div class="tour-head">
-      <h2 class="reveal">From the<br/>founders<em> who came.</em></h2>
-      <div class="meta reveal">Selected voices from<br/>the 2025 pilot gatherings.</div>
+      <h2 class="reveal">From the<br/>voices<em> who came.</em></h2>
+      <div class="meta reveal">Real reflections from<br/>GO SUMMIT attendees.</div>
     </div>
     <div class="v-grid">
-      <div class="v reveal">
-        <q>The most honest room I've been in all year. No performative demos — just operators trading real playbooks on how they got into the Middle East.</q>
-        <cite><b>Founder</b>AI hardware · Series A · Shenzhen</cite>
-      </div>
-      <div class="v reveal">
-        <q>I flew in for 48 hours and left with two co-investors and a distribution partner in Dubai. That's never happened at a conference.</q>
-        <cite><b>Partner</b>Global VC · Singapore</cite>
-      </div>
-      <div class="v reveal">
-        <q>Monica's crew curates like editors, not event planners. Every seat in the room earns its place.</q>
-        <cite><b>Operator</b>Growth · Cross-border SaaS</cite>
+      <div class="v-track">
+        <div class="v reveal">
+          <q>Through the many vivid and practical case studies shared by guests from different fields, I gained a comprehensive understanding of how AI is deeply empowering and inspiring innovation across industries. It also broke my previous assumptions about the boundaries of AI applications. As an AI artist, I was especially struck by the tangible value and diverse creative possibilities that individual creators can unlock in the AI-enabled era. This summit transformed the AI industry's macro-level changes from abstract concepts into concrete, perceptible, learnable, and actionable details in my mind. It brought me many inspirations and references for my future creative work, and I gained a great deal from it.</q>
+          <cite><b>Zhao Xiaoyi</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>I systematically learned the methodology for software globalization. There was so much practical knowledge! I am also deeply grateful for the atmosphere at AGI Villa — so open, supportive, and generous. It was my first time attending an event where everyone was seriously taking notes and selflessly sharing everything they learned. This vibe was truly moving and powerful!</q>
+          <cite><b>Stephanie</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>The content shared at GO SUMMIT was truly excellent. From macro-level frameworks to hands-on execution strategies, it was a complete feast of insights on AI + globalization. The information density was high, the industry takeaways were substantial, and I met many outstanding and interesting people. Thank you to the organizers and all the guest speakers.</q>
+          <cite><b>Yang</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>After attending the two-day GO SUMMIT, I was greatly inspired by the real insights from practitioners. The speakers were direct, practical, and never talked in empty terms. Every session could be used as a benchmark for my own business, and it broadened my thinking significantly. The atmosphere was great, the content was highly practical, and it was absolutely worth it!</q>
+          <cite><b>Kiki</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>Gathering with a group of like-minded people and exchanging ideas is already a valuable experience in itself. The real pitfalls encountered in entrepreneurship, as well as the struggles and trade-offs during transformation, are often even more inspiring than polished success stories.</q>
+          <cite><b>Gong Xuan</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>I learned about many concrete and realistic problems that entrepreneurs actually face, while also discovering many overlooked opportunities.</q>
+          <cite><b>Yvonne</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>The summit covered both macro trends in global AI expansion and specific AI entrepreneurship insights across different fields and sectors. It was full of practical takeaways.</q>
+          <cite><b>Li Bin</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>I gained a one-stop panoramic understanding of the risks and go-to-market channels involved in global expansion. It is especially suitable for beginners exploring overseas markets. The speakers were all guests with deep, first-hand insights, and I gained a lot.</q>
+          <cite><b>Harper</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>I learned a great deal about growth, including entrepreneurship, multi-agent systems, and operations. I also had the chance to meet many experienced leaders and experts in the industry.</q>
+          <cite><b>Yu Gui</b>Attendee</cite>
+        </div>
+        <div class="v reveal">
+          <q>My perspective has become broader. Every topic and category is worth deeper reflection and further study. The overall framework and way of thinking are highly valuable as a reference.</q>
+          <cite><b>JY</b>Attendee</cite>
+        </div>
+
+        <div class="v" aria-hidden="true"><q>Through the many vivid and practical case studies shared by guests from different fields, I gained a comprehensive understanding of how AI is deeply empowering and inspiring innovation across industries. It also broke my previous assumptions about the boundaries of AI applications. As an AI artist, I was especially struck by the tangible value and diverse creative possibilities that individual creators can unlock in the AI-enabled era. This summit transformed the AI industry's macro-level changes from abstract concepts into concrete, perceptible, learnable, and actionable details in my mind. It brought me many inspirations and references for my future creative work, and I gained a great deal from it.</q><cite><b>Zhao Xiaoyi</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>I systematically learned the methodology for software globalization. There was so much practical knowledge! I am also deeply grateful for the atmosphere at AGI Villa — so open, supportive, and generous. It was my first time attending an event where everyone was seriously taking notes and selflessly sharing everything they learned. This vibe was truly moving and powerful!</q><cite><b>Stephanie</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>The content shared at GO SUMMIT was truly excellent. From macro-level frameworks to hands-on execution strategies, it was a complete feast of insights on AI + globalization. The information density was high, the industry takeaways were substantial, and I met many outstanding and interesting people. Thank you to the organizers and all the guest speakers.</q><cite><b>Yang</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>After attending the two-day GO SUMMIT, I was greatly inspired by the real insights from practitioners. The speakers were direct, practical, and never talked in empty terms. Every session could be used as a benchmark for my own business, and it broadened my thinking significantly. The atmosphere was great, the content was highly practical, and it was absolutely worth it!</q><cite><b>Kiki</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>Gathering with a group of like-minded people and exchanging ideas is already a valuable experience in itself. The real pitfalls encountered in entrepreneurship, as well as the struggles and trade-offs during transformation, are often even more inspiring than polished success stories.</q><cite><b>Gong Xuan</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>I learned about many concrete and realistic problems that entrepreneurs actually face, while also discovering many overlooked opportunities.</q><cite><b>Yvonne</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>The summit covered both macro trends in global AI expansion and specific AI entrepreneurship insights across different fields and sectors. It was full of practical takeaways.</q><cite><b>Li Bin</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>I gained a one-stop panoramic understanding of the risks and go-to-market channels involved in global expansion. It is especially suitable for beginners exploring overseas markets. The speakers were all guests with deep, first-hand insights, and I gained a lot.</q><cite><b>Harper</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>I learned a great deal about growth, including entrepreneurship, multi-agent systems, and operations. I also had the chance to meet many experienced leaders and experts in the industry.</q><cite><b>Yu Gui</b>Attendee</cite></div>
+        <div class="v" aria-hidden="true"><q>My perspective has become broader. Every topic and category is worth deeper reflection and further study. The overall framework and way of thinking are highly valuable as a reference.</q><cite><b>JY</b>Attendee</cite></div>
       </div>
     </div>
   </div>
