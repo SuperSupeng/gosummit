@@ -79,6 +79,33 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .hero-justgo img{width:100%;height:auto;display:block;opacity:.95}
 
+/* ——— photo wall (between nav and city ticker) ——— */
+.photo-wall{
+  margin-top:28px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;position:relative;
+  padding:18px 0;
+  mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 5%,#000 95%,transparent 100%);
+}
+.photo-track{
+  display:flex;gap:14px;width:max-content;
+  animation:photoScroll 46s linear infinite;
+  will-change:transform;
+}
+.photo-wall:hover .photo-track{animation-play-state:paused}
+.photo-item{
+  width:280px;height:170px;flex:0 0 auto;overflow:hidden;
+  border:1px solid var(--line);border-radius:4px;
+  background:#090909;
+}
+.photo-item img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.04) contrast(1.03)}
+@keyframes photoScroll{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+
 /* ——— hero marquee (auto-scrolling tour ticker under logo) ——— */
 .marquee{
   margin-top:36px;
@@ -300,6 +327,7 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   :root{--gutter:6vw}
   .section{padding:90px var(--gutter)}
   .hero{padding:110px var(--gutter) 60px}
+  .photo-item{width:210px;height:128px}
  .hero-justgo{top:148px;right:20px;width:min(160px,36vw)}
   .tour-head{flex-direction:column;align-items:flex-start;gap:20px}
   .tour-head .meta{text-align:left}
@@ -337,6 +365,29 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 <header class="hero">
 
   <div class="hero-justgo reveal"><img src="assets/just-go-logo.png" alt="Just GO" /></div>
+
+  <div class="photo-wall reveal" aria-label="GO Summit event photo wall">
+    <div class="photo-track">
+      <div class="photo-item"><img src="assets/photos/1.png" alt="GO Summit event photo 1" /></div>
+      <div class="photo-item"><img src="assets/photos/2.png" alt="GO Summit event photo 2" /></div>
+      <div class="photo-item"><img src="assets/photos/3.png" alt="GO Summit event photo 3" /></div>
+      <div class="photo-item"><img src="assets/photos/4.png" alt="GO Summit event photo 4" /></div>
+      <div class="photo-item"><img src="assets/photos/5.png" alt="GO Summit event photo 5" /></div>
+      <div class="photo-item"><img src="assets/photos/6.png" alt="GO Summit event photo 6" /></div>
+      <div class="photo-item"><img src="assets/photos/7.png" alt="GO Summit event photo 7" /></div>
+      <div class="photo-item"><img src="assets/photos/8.png" alt="GO Summit event photo 8" /></div>
+      <div class="photo-item"><img src="assets/photos/9.png" alt="GO Summit event photo 9" /></div>
+      <div class="photo-item"><img src="assets/photos/1.png" alt="" aria-hidden="true" /></div>
+      <div class="photo-item"><img src="assets/photos/2.png" alt="" aria-hidden="true" /></div>
+      <div class="photo-item"><img src="assets/photos/3.png" alt="" aria-hidden="true" /></div>
+      <div class="photo-item"><img src="assets/photos/4.png" alt="" aria-hidden="true" /></div>
+      <div class="photo-item"><img src="assets/photos/5.png" alt="" aria-hidden="true" /></div>
+      <div class="photo-item"><img src="assets/photos/6.png" alt="" aria-hidden="true" /></div>
+      <div class="photo-item"><img src="assets/photos/7.png" alt="" aria-hidden="true" /></div>
+      <div class="photo-item"><img src="assets/photos/8.png" alt="" aria-hidden="true" /></div>
+      <div class="photo-item"><img src="assets/photos/9.png" alt="" aria-hidden="true" /></div>
+    </div>
+  </div>
 
   <div class="marquee reveal" aria-label="2026 World Tour schedule">
     <div class="marquee-track">
