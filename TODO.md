@@ -23,7 +23,7 @@
 
 ---
 
-## 待办（10 项 · 5 类）
+## 待办（7 项 · 5 类）
 
 ### 🟡 你 / 团队人工执行
 
@@ -61,10 +61,10 @@
 
 - [x] **#23** 部署平台选型（已确认 Vercel）  
   当前选择：Vercel
-- [ ] **#24** 域名邮箱 + 发件方案  
-  收件：CF Email Routing（免费转发）/ 飞书企业邮箱 / Google Workspace  
-  发件：Resend / Postmark / 飞书机器人  
-  推荐组合：CF Email Routing 收 + Resend 发，DNS 一次配齐 SPF/DKIM/DMARC
+- [x] **#24** 域名邮箱 + 发件方案（已拍板）  
+  收件：企业微信邮箱（`info@agivilla.com` 已可收信）  
+  发件：Resend（`hello@agivilla.com`）  
+  待执行：确认 `hello@agivilla.com` 在 Resend 已验证并完成 SPF/DKIM/DMARC
 
 ### 🛠 Claude 能做（被上面事项 block）
 
@@ -76,17 +76,16 @@
   blocked by #20  
   - 替换每页 hero `.btn.primary` 的 mailto 为 `https://lu.ma/<id>` `target="_blank"`
   - 未建的城市保留 Notify-me mailto fallback
-- [x] **#25** 首页 footer Subscribe 接后端（已完成代码，待 Vercel 环境变量配置）  
+- [x] **#25** 首页 footer Subscribe 接后端（已完成代码）  
   当前：默认调用 `/api/subscribe`；失败时回退 `mailto`。  
   Vercel 环境变量：`RESEND_API_KEY`、`RESEND_AUDIENCE_ID`、`RESEND_FROM_EMAIL`
-- [ ] **#27** 城市页 Hero 加 Add to Calendar 按钮（ICS）  
-  深圳场已完成；其余城市待补（日期/场地确认后逐页加）  
-  生成 ICS data URI，按钮放在 hero CTA 行
+- [x] **#27** 城市页 Hero 加 Add to Calendar 按钮（ICS）  
+  已决策：不做该功能（非必要，避免维护成本）
 
 ### 🚀 部署上线
 
 - [ ] **#26** agivilla.com DNS（MX/SPF/DKIM/DMARC）+ gosummit.ai 部署到选定平台 + 生产环境验证  
-  blocked by #23 #24
+  当前状态：#23/#24 已拍板，待做 Vercel 环境变量 + DNS 终验 + 线上回归
 
 ---
 
@@ -113,8 +112,8 @@
   - 报名 → **Luma**（每城一 event，挂到一个 series；点击跳转新标签，不嵌入 iframe）
   - Speak → **mailto monica@agivilla.com**（带模版）
   - Sponsor → **mailto darren@agivilla.com**（带模版）
-  - Subscribe → **Resend**（待 #25）
-  - Inbound 收件 → **info@/monica@/darren@ @ agivilla.com**（待 #24 配置）
+  - Subscribe → **Resend**（`/api/subscribe` 已就绪，待线上环境变量生效）
+  - Inbound 收件 → **企业微信邮箱**（`info@/monica@/darren@agivilla.com` 已可收信）
 - **邮箱域**：`agivilla.com`（不是 gosummit.ai；后者只是网站域）
 - **Speak / Sponsor 双轨**：series-level + per-stop，统一进 `/partner`，不再嵌在每个城市页底部
 - **数据架构暂不自建 DB**：每条线让专业 SaaS 各自管自己的数据（Luma 管报名，Resend 管订阅），未来需要时再做汇总层
