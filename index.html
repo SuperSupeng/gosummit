@@ -335,6 +335,24 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   to{transform:translate3d(-50%,0,0)}
 }
 
+/* ——— tour ——— */
+.tour-section{border-top:1px solid var(--line);padding:120px var(--gutter)}
+.tour-section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:50px;gap:24px;flex-wrap:wrap}
+.tour-section-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(28px,3.6vw,48px);letter-spacing:-.015em}
+.tour-section-head h2 em{font-style:italic;color:var(--fg-soft);font-weight:400}
+.tour-section-head .meta{color:var(--fg-soft);font-size:14px;letter-spacing:.04em}
+.tour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.tour-card{padding:32px 26px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px;color:var(--fg-soft);transition:background .25s,color .25s,border-color .25s;position:relative;min-height:200px}
+.tour-card:nth-child(3n){border-right:0}
+.tour-card:hover{background:rgba(232,116,12,.05);color:var(--fg);border-color:rgba(232,116,12,.18)}
+.tour-card .tc-month{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:14px;letter-spacing:.02em}
+.tour-card .tc-city{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1;letter-spacing:-.01em;color:inherit;margin-top:2px}
+.tour-card .tc-tag{font-size:13px;color:var(--fg-dim);margin-top:8px;flex:1}
+.tour-card .tc-arrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-soft);margin-top:8px}
+.tour-card.flagship::after{content:"FLAGSHIP";position:absolute;top:18px;right:18px;font-size:9px;letter-spacing:.22em;color:var(--accent);font-weight:600;border:1px solid rgba(232,116,12,.4);padding:4px 8px;border-radius:999px}
+@media (max-width:1024px){.tour-grid{grid-template-columns:repeat(2,1fr)}.tour-card:nth-child(3n){border-right:1px solid var(--line)}.tour-card:nth-child(2n){border-right:0}}
+@media (max-width:600px){.tour-grid{grid-template-columns:1fr}.tour-card{border-right:0!important}}
+
 /* ——— partners ——— */
 .partners{border-top:1px solid var(--line);padding:120px var(--gutter)}
 .p-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:50px}
@@ -457,10 +475,8 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
     <a href="#top" class="wordmark" aria-label="GO Summit"><span class="wordmark-logo" aria-hidden="true"></span><span class="sep">WORLD TOUR 2026-2027</span></a>
     <ul>
       <li><a href="#about">ABOUT</a></li>
-      <li><a href="/agenda">AGENDA</a></li>
-      <li><a href="/speakers" onclick="window.location.href='/speakers';return false;">SPEAKERS</a></li>
-      <li><a href="#partners">PARTNERS</a></li>
-      <li><a href="/attend">ATTEND</a></li>
+      <li><a href="#tour">TOUR</a></li>
+      <li><a href="/partner">PARTNER</a></li>
       <li><a href="/contact">CONTACT</a></li>
     </ul>
   </div>
@@ -547,6 +563,72 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 
 </header>
 
+<!-- TOUR -->
+<section id="tour" class="section tour-section">
+  <div class="wrap">
+    <div class="tour-section-head">
+      <h2 class="reveal">The <em>2026 World Tour.</em></h2>
+      <div class="meta reveal">Nine cities · twelve months · one cohort moving with us.</div>
+    </div>
+    <div class="tour-grid">
+      <a class="tour-card reveal" href="/cities/shanghai-apr/">
+        <span class="tc-month">April 2026 · Opener</span>
+        <span class="tc-city">Shanghai</span>
+        <span class="tc-tag">Spring kickoff · the cohort meets</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+      <a class="tour-card reveal" href="/cities/shenzhen-may/">
+        <span class="tc-month">May 2026</span>
+        <span class="tc-city">Shenzhen</span>
+        <span class="tc-tag">Robotics · EV · embodied AI</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+      <a class="tour-card reveal" href="/cities/singapore-jun/">
+        <span class="tc-month">June 2026</span>
+        <span class="tc-city">Singapore</span>
+        <span class="tc-tag">SEA gateway · cross-border</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+      <a class="tour-card reveal" href="/cities/shanghai-jul/">
+        <span class="tc-month">July 2026 · WAIC</span>
+        <span class="tc-city">Shanghai</span>
+        <span class="tc-tag">Foundation models · WAIC week</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+      <a class="tour-card reveal" href="/cities/hongkong-aug/">
+        <span class="tc-month">August 2026</span>
+        <span class="tc-city">Hongkong</span>
+        <span class="tc-tag">Capital · deal flow</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+      <a class="tour-card reveal" href="/cities/hangzhou-sep/">
+        <span class="tc-month">September 2026</span>
+        <span class="tc-city">Hangzhou</span>
+        <span class="tc-tag">Consumer AI · agents</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+      <a class="tour-card reveal" href="/cities/singapore-oct/">
+        <span class="tc-month">October 2026</span>
+        <span class="tc-city">Singapore</span>
+        <span class="tc-tag">SEA · second pass</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+      <a class="tour-card reveal" href="/cities/shenzhen-nov/">
+        <span class="tc-month">November 2026</span>
+        <span class="tc-city">Shenzhen</span>
+        <span class="tc-tag">Hardware · second pass</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+      <a class="tour-card reveal flagship" href="/cities/dubai-dec/">
+        <span class="tc-month">December 2026 · Flagship</span>
+        <span class="tc-city">Dubai</span>
+        <span class="tc-tag">Middle East · year-end summit</span>
+        <span class="tc-arrow">View stop →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- VOICES -->
 <section id="voices" class="section voices">
   <div class="wrap">
@@ -631,6 +713,9 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
       <div>Partner 07</div><div>Partner 08</div><div>Partner 09</div>
       <div>Partner 10</div><div>Partner 11</div><div>Partner 12</div>
     </div>
+    <div class="reveal" style="margin-top:32px;display:flex;justify-content:flex-end">
+      <a href="/partner" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border:1px solid var(--line-2);border-radius:999px;font-size:14px;color:var(--fg);transition:border-color .2s,color .2s">Become a partner <span>→</span></a>
+    </div>
   </div>
 </section>
 
@@ -640,8 +725,8 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   <h2 class="slogan reveal"><img src="assets/just-go-logo-transparent.png" alt="Just GO — GO Summit" /></h2>
   <p class="reveal">Applications open for speakers, delegates and founding partners of the 2026 tour. Rolling review.</p>
   <div class="cta-row reveal">
-    <a class="btn primary" href="#">Apply to Attend <span>→</span></a>
-    <a class="btn ghost" href="#">Speak &amp; Sponsor</a>
+    <a class="btn primary" href="#tour">Pick your city <span>→</span></a>
+    <a class="btn ghost" href="/partner">Speak or sponsor</a>
   </div>
 </section>
 
@@ -652,18 +737,18 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
       <h4 style="margin-bottom:14px">GO SUMMIT</h4>
       <p class="sub">Monthly, in a different city. Build the next global category, with the people actually doing it.</p>
       <p class="org-ref">Organized by AGI Villa · 2026</p>
-      <form class="sub-form" onsubmit="event.preventDefault();this.querySelector('input').value='Subscribed — see you in the next city.'">
-        <input type="email" placeholder="you@founder.com" required />
+      <form id="subscribe-form" class="sub-form">
+        <input id="subscribe-email" type="email" placeholder="you@founder.com" maxlength="254" autocomplete="email" required />
         <button type="submit">Subscribe</button>
       </form>
     </div>
     <div>
-      <h4>ABOUT</h4>
-      <ul><li><a href="#agenda">AGENDA</a></li><li><a href="/speakers" onclick="window.location.href='/speakers';return false;">SPEAKERS</a></li><li><a href="#partners">PARTNERS</a></li></ul>
+      <h4>EXPLORE</h4>
+      <ul><li><a href="#about">About</a></li><li><a href="#tour">Tour</a></li><li><a href="/partner">Partner</a></li></ul>
     </div>
     <div>
       <h4>CONNECT</h4>
-      <ul><li><a href="/attend">ATTEND</a></li><li><a href="/contact">CONTACT</a></li></ul>
+      <ul><li><a href="/contact">Contact</a></li><li><a href="mailto:info@agivilla.com">info@agivilla.com</a></li></ul>
     </div>
   </div>
   <div class="f-bottom">
@@ -682,12 +767,20 @@ const io = new IntersectionObserver((entries)=>{
   });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.querySelectorAll('.lang button').forEach(b=>{
-  b.addEventListener('click',()=>{
-    document.querySelectorAll('.lang button').forEach(x=>x.removeAttribute('aria-current'));
-    b.setAttribute('aria-current','true');
+const subscribeForm = document.getElementById('subscribe-form');
+if (subscribeForm) {
+  subscribeForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const emailInput = document.getElementById('subscribe-email');
+    const email = emailInput?.value?.trim();
+    if (!emailInput || !email || !emailInput.checkValidity()) return;
+    const subject = encodeURIComponent('GO Summit newsletter subscription');
+    const body = encodeURIComponent(
+      `Hi GO Summit team,\n\nPlease add me to the newsletter list.\n\nEmail: ${email}\nName:\nCompany:\n\nThanks,`
+    );
+    window.location.href = `mailto:info@agivilla.com?subject=${subject}&body=${body}`;
   });
-});
+}
 </script>
 </body>
 </html>

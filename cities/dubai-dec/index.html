@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GO SUMMIT · December 2026 · Dubai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;--fg:#F5F5F7;--fg-dim:#86868B;--fg-soft:#A1A1A6;
+  --line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);
+  --accent:#E8740C;--glass:rgba(10,10,10,.6);
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+  --gutter:10vw;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);background:var(--glass);border-bottom:1px solid var(--line)}
+.nav-inner{width:80vw;margin:0 auto;padding:14px 0;display:flex;align-items:center;justify-content:space-between;font-size:14px}
+.wordmark{display:inline-flex;align-items:center;gap:10px}
+.wordmark-logo{display:block;width:210px;height:68px;background:var(--accent);-webkit-mask-image:url("/assets/go-summit-logo.png");-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:left center;-webkit-mask-mode:luminance;mask-image:url("/assets/go-summit-logo.png");mask-repeat:no-repeat;mask-size:contain;mask-position:left center;mask-mode:luminance;filter:drop-shadow(0 0 14px rgba(232,116,12,.26))}
+.wordmark .sep{display:inline-block;margin-left:10px;padding-left:12px;border-left:1px solid var(--line-2);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-dim);font-weight:500}
+.nav ul{display:flex;gap:30px;list-style:none;color:var(--fg-soft)}
+.nav ul a{font-size:14px;letter-spacing:.16em;text-transform:uppercase;transition:color .2s}
+.nav ul a.active,.nav ul a:hover{color:var(--fg)}
+
+main{padding-top:96px}
+
+/* HERO */
+.city-hero{padding:70px var(--gutter) 80px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.city-hero::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:80%;background:radial-gradient(60% 60% at 50% 20%,rgba(232,116,12,.18),transparent 70%);filter:blur(30px);pointer-events:none}
+.city-hero > *{position:relative;z-index:1}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+.city-hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(58px,9vw,140px);line-height:.94;letter-spacing:-.025em;margin-bottom:22px}
+.tagline{color:var(--fg-soft);font-size:clamp(18px,1.6vw,22px);max-width:760px;line-height:1.55;font-weight:300;margin-bottom:44px}
+.city-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:44px}
+.city-meta > div{padding:24px 18px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.city-meta > div:last-child{border-right:0}
+.city-meta b{font-family:var(--serif);font-size:clamp(22px,2.2vw,32px);font-weight:500;letter-spacing:-.01em;color:var(--fg)}
+.city-meta span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-dim);font-weight:500}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:15px 30px;border-radius:999px;font-size:14px;letter-spacing:.02em;font-weight:500;border:1px solid var(--line-2);transition:all .25s ease;display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);cursor:pointer}
+.btn.primary{background:var(--fg);color:#000;border-color:var(--fg)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#000}
+.btn.ghost{color:var(--fg)}
+.btn.ghost:hover{border-color:var(--fg);background:rgba(255,255,255,.04)}
+
+/* sections */
+.sec{padding:100px var(--gutter);border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:50px;gap:24px;flex-wrap:wrap}
+.sec-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4vw,52px);letter-spacing:-.02em}
+.sec-head h2 em{font-style:italic;color:var(--fg-soft);font-weight:400}
+.sec-head .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-dim);font-weight:500}
+
+/* AGENDA */
+.day{margin-bottom:50px}
+.day:last-child{margin-bottom:0}
+.day-head{display:flex;align-items:baseline;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.day-head h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.6vw,34px);letter-spacing:-.01em}
+.day-head .day-tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.timeline{list-style:none;display:flex;flex-direction:column}
+.timeline li{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
+.timeline li:last-child{border-bottom:0}
+.timeline .time{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:18px;padding-top:2px}
+.timeline strong{display:block;font-weight:500;font-size:17px;color:var(--fg);margin-bottom:4px}
+.timeline p{color:var(--fg-soft);font-size:14px;line-height:1.55}
+
+/* SPEAKERS */
+.sp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.sp-card{padding:28px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:14px;transition:background .25s}
+.sp-card:nth-child(4n){border-right:0}
+.sp-card:hover{background:rgba(255,255,255,.02)}
+.sp-photo{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#1a1a1a,#0a0a0a);border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--fg-dim)}
+.sp-name{font-family:var(--serif);font-size:20px;font-weight:500;letter-spacing:-.01em}
+.sp-role{color:var(--fg-soft);font-size:13px;line-height:1.5}
+
+/* NEXT STOPS */
+.stops-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.stop-card{padding:28px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px;transition:background .25s,color .25s;color:var(--fg-soft)}
+.stop-card:nth-child(4n){border-right:0}
+.stop-card:hover{background:rgba(232,116,12,.06);color:var(--fg)}
+.stop-card .month{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent)}
+.stop-card .city{font-family:var(--serif);font-size:28px;letter-spacing:-.01em;color:inherit}
+.stop-card .arrow{margin-top:8px;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+
+/* FOOTER */
+footer{padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;width:80vw;margin:0 auto 50px;align-items:start}
+.f-grid > div{display:flex;flex-direction:column;align-items:flex-start}
+.f-grid h4{color:var(--fg);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 18px}
+.f-grid ul{list-style:none;display:grid;gap:10px}
+.f-grid a:hover{color:var(--fg)}
+.f-grid .sub{color:var(--fg-soft);max-width:380px;line-height:1.6;margin-top:8px}
+.f-grid .org-ref{margin-top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-dim);font-weight:500}
+.partner-cta{margin-top:18px;padding:14px 20px;border:1px solid var(--line-2);border-radius:999px;font-size:13px;color:var(--fg);display:inline-flex;align-items:center;gap:8px;transition:border-color .2s}
+.partner-cta:hover{border-color:var(--accent);color:var(--accent)}
+.f-bottom{width:80vw;margin:0 auto;display:flex;justify-content:space-between;padding-top:22px;border-top:1px solid var(--line);flex-wrap:wrap;gap:14px}
+
+@media (max-width:1024px){
+  .nav ul{display:none}
+  .wordmark .sep{display:none}
+  .city-meta{grid-template-columns:repeat(2,1fr)}
+  .city-meta > div:nth-child(2n){border-right:0}
+  .city-meta > div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .sp-grid,.stops-grid{grid-template-columns:repeat(2,1fr)}
+  .sp-card:nth-child(4n),.stop-card:nth-child(4n){border-right:1px solid var(--line)}
+  .sp-card:nth-child(2n),.stop-card:nth-child(2n){border-right:0}
+  .f-grid{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media (max-width:600px){
+  :root{--gutter:6vw}
+  .city-hero{padding:50px var(--gutter) 60px}
+  .sec{padding:70px var(--gutter)}
+  .timeline li{grid-template-columns:80px 1fr;gap:18px}
+  .sp-grid,.stops-grid{grid-template-columns:1fr}
+  .sp-card,.stop-card{border-right:0!important}
+  .f-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="wordmark" aria-label="GO Summit"><span class="wordmark-logo" aria-hidden="true"></span><span class="sep">WORLD TOUR 2026-2027</span></a>
+    <ul>
+      <li><a href="/#about">ABOUT</a></li>
+      <li><a class="active" href="/#tour">TOUR</a></li>
+      <li><a href="/partner">PARTNER</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="city-hero">
+  <div class="kicker">December 2026 · Stop 09 of 09 · Flagship</div>
+  <h1>Dubai</h1>
+  <p class="tagline">The flagship of the year. The full cohort converges in Dubai for the year-end summit — keynotes, year-in-review, and the most concentrated deal-making conversation we run.</p>
+
+  <!-- TODO replace TBA with confirmed date / venue when locked -->
+  <div class="city-meta">
+    <div><b>2 days</b><span>format</span></div>
+    <div><b>~150</b><span>founders</span></div>
+    <div><b>TBA</b><span>dates</span></div>
+    <div><b>TBA</b><span>venue</span></div>
+  </div>
+
+  <div class="cta-row">
+    <!-- TODO when Luma event live, replace href with https://lu.ma/<event-slug> -->
+    <a class="btn primary" href="mailto:info@agivilla.com?subject=Notify%20me%20%E2%80%94%20Dubai%20%28December%202026%29&body=Hi%20GO%20Summit%20team%2C%0A%0APlease%20notify%20me%20when%20registration%20opens%20for%20GO%20SUMMIT%20Dubai%20%28December%202026%29.%0A%0AName%3A%0ATitle%20/%20Company%3A%0AEmail%3A%0A%0AThanks%2C">Notify me when registration opens →</a>
+    <a class="btn ghost" href="/partner">Sponsor or speak at this stop</a>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section class="sec" id="agenda">
+  <div class="sec-head">
+    <h2>Agenda <em>· two days, end to end</em></h2>
+    <span class="eyebrow">Provisional · subject to refinement</span>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-tag">Day 1</span>
+      <h3>Industry Tour</h3>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">09:30</span><div><strong>Welcome briefing</strong><p>Cohort intro, tour logistics, the stories behind the companies you're about to meet.</p></div></li>
+      <li><span class="time">10:00</span><div><strong>Hosted tour 01 · Industry leader (subject TBA)</strong><p>Founder-led walkthrough at one of the city's anchor companies. Closed-door Q&amp;A.</p></div></li>
+      <li><span class="time">12:30</span><div><strong>Lunch &amp; open networking</strong><p>Founder-to-founder unstructured time on-site.</p></div></li>
+      <li><span class="time">14:30</span><div><strong>Hosted tour 02 · Industry leader (subject TBA)</strong><p>A second on-site visit anchored in the city's industrial signature.</p></div></li>
+      <li><span class="time">17:30</span><div><strong>Tour wrap-up</strong><p>Debrief, day-2 priming, optional walking dinner.</p></div></li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-tag">Day 2</span>
+      <h3>Summit</h3>
+    </div>
+    <ul class="timeline">
+      <li><span class="time">09:00</span><div><strong>Opening keynote</strong><p>One operator's read on where the next global category gets built.</p></div></li>
+      <li><span class="time">10:00</span><div><strong>Founder panel · Building from China, with the world</strong><p>Three founders, one moderator. No slides, just operator depth.</p></div></li>
+      <li><span class="time">11:30</span><div><strong>Closed-door founder roundtable</strong><p>Invite-only. 12 founders, one topic, Chatham House rule.</p></div></li>
+      <li><span class="time">13:00</span><div><strong>Lunch</strong></div></li>
+      <li><span class="time">14:30</span><div><strong>Investor matchmaking</strong><p>Curated 1:1 conversations with funds active in this market.</p></div></li>
+      <li><span class="time">16:30</span><div><strong>Policy &amp; market briefing</strong><p>Short, high-density read on what's actually changing.</p></div></li>
+      <li><span class="time">19:30</span><div><strong>Signature evening salon</strong><p>The conversation continues — small group, long form.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section class="sec" id="speakers">
+  <div class="sec-head">
+    <h2>Speakers <em>· founders, operators, investors</em></h2>
+    <span class="eyebrow">Lineup forming</span>
+  </div>
+  <!-- TODO replace each card with confirmed speaker when locked -->
+  <div class="sp-grid">
+    <article class="sp-card"><div class="sp-photo">TBA</div><div class="sp-name">Speaker 01</div><div class="sp-role">Founder · Embodied AI</div></article>
+    <article class="sp-card"><div class="sp-photo">TBA</div><div class="sp-name">Speaker 02</div><div class="sp-role">Operator · Advanced Manufacturing</div></article>
+    <article class="sp-card"><div class="sp-photo">TBA</div><div class="sp-name">Speaker 03</div><div class="sp-role">Investor · Hardware-led VC</div></article>
+    <article class="sp-card"><div class="sp-photo">TBA</div><div class="sp-name">Speaker 04</div><div class="sp-role">Founder · Robotics</div></article>
+    <article class="sp-card"><div class="sp-photo">TBA</div><div class="sp-name">Speaker 05</div><div class="sp-role">Operator · EV / New Energy</div></article>
+    <article class="sp-card"><div class="sp-photo">TBA</div><div class="sp-name">Speaker 06</div><div class="sp-role">Founder · AI Infrastructure</div></article>
+    <article class="sp-card"><div class="sp-photo">TBA</div><div class="sp-name">Speaker 07</div><div class="sp-role">Cross-border Operator</div></article>
+    <article class="sp-card"><div class="sp-photo">TBA</div><div class="sp-name">Speaker 08</div><div class="sp-role">Policy / Market Analyst</div></article>
+  </div>
+</section>
+
+<!-- NEXT STOPS -->
+<section class="sec" id="next-stops">
+  <div class="sec-head">
+    <h2>The rest of the <em>tour.</em></h2>
+    <span class="eyebrow">Nine cities · twelve months</span>
+  </div>
+  <div class="stops-grid">
+    <a class="stop-card" href="/cities/shanghai-apr/"><span class="month">April · Opener</span><span class="city">Shanghai</span><span class="arrow">View →</span></a>
+    <a class="stop-card" href="/cities/shenzhen-may/"><span class="month">May</span><span class="city">Shenzhen</span><span class="arrow">View →</span></a>
+    <a class="stop-card" href="/cities/singapore-jun/"><span class="month">June</span><span class="city">Singapore</span><span class="arrow">View →</span></a>
+    <a class="stop-card" href="/cities/shanghai-jul/"><span class="month">July · WAIC</span><span class="city">Shanghai</span><span class="arrow">View →</span></a>
+    <a class="stop-card" href="/cities/hongkong-aug/"><span class="month">August</span><span class="city">Hongkong</span><span class="arrow">View →</span></a>
+    <a class="stop-card" href="/cities/hangzhou-sep/"><span class="month">September</span><span class="city">Hangzhou</span><span class="arrow">View →</span></a>
+    <a class="stop-card" href="/cities/singapore-oct/"><span class="month">October</span><span class="city">Singapore</span><span class="arrow">View →</span></a>
+    <a class="stop-card" href="/cities/shenzhen-nov/"><span class="month">November</span><span class="city">Shenzhen</span><span class="arrow">View →</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-grid">
+    <div>
+      <h4 style="margin-bottom:14px">GO SUMMIT</h4>
+      <p class="sub">Monthly, in a different city. Build the next global category, with the people actually doing it.</p>
+      <p class="org-ref">Organized by AGI Villa · 2026</p>
+      <a class="partner-cta" href="/partner">Want to partner with us? <span>→</span></a>
+    </div>
+    <div>
+      <h4>EXPLORE</h4>
+      <ul>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#tour">Tour</a></li>
+        <li><a href="/partner">Partner</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>CONNECT</h4>
+      <ul>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="mailto:info@agivilla.com">info@agivilla.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2026 GO SUMMIT. All rights reserved.</span>
+    <span>Designed in Shanghai · Shipped worldwide.</span>
+  </div>
+</footer>
+
+</body>
+</html>

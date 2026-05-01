@@ -73,16 +73,31 @@ main{padding:130px var(--gutter) 90px}
 .card .photo img.monica{object-position:center 0%}
 .card .photo img.darren{object-position:center 45%}
 
+/* footer */
+footer{padding:60px var(--gutter) 40px;color:#86868B;font-size:13px;border-top:1px solid var(--line)}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;width:80vw;margin:0 auto 50px;align-items:start}
+.f-grid > div{display:flex;flex-direction:column;align-items:flex-start}
+.f-grid h4{color:var(--fg);font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 18px}
+.f-grid ul{list-style:none;display:grid;gap:10px}
+.f-grid a:hover{color:var(--fg)}
+.f-grid .sub{color:var(--fg-soft);max-width:380px;line-height:1.6}
+.f-grid .org-ref{margin-top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#86868B;font-weight:500}
+.partner-cta{margin-top:18px;padding:14px 20px;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:13px;color:var(--fg);display:inline-flex;align-items:center;gap:8px;transition:border-color .2s,color .2s}
+.partner-cta:hover{border-color:var(--accent);color:var(--accent)}
+.f-bottom{width:80vw;margin:0 auto;display:flex;justify-content:space-between;padding-top:22px;border-top:1px solid var(--line);flex-wrap:wrap;gap:14px}
+
 @media (max-width:1024px){
   .nav ul{display:none}
   .wordmark .sep{display:none}
   .contact-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr;gap:30px}
 }
 @media (max-width:600px){
   :root{--gutter:6vw}
   main{padding-top:108px}
   .hero p{font-size:16px}
   .card .photo img{width:38%}
+  .f-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -92,10 +107,8 @@ main{padding:130px var(--gutter) 90px}
     <a href="/" class="wordmark" aria-label="GO Summit"><span class="wordmark-logo" aria-hidden="true"></span><span class="sep">WORLD TOUR 2026-2027</span></a>
     <ul>
       <li><a href="/#about">ABOUT</a></li>
-      <li><a href="/agenda">AGENDA</a></li>
-      <li><a href="/speakers">SPEAKERS</a></li>
-      <li><a href="/#partners">PARTNERS</a></li>
-      <li><a href="/attend">ATTEND</a></li>
+      <li><a href="/#tour">TOUR</a></li>
+      <li><a href="/partner">PARTNER</a></li>
       <li><a class="active" href="/contact">CONTACT</a></li>
     </ul>
   </div>
@@ -112,17 +125,49 @@ main{padding:130px var(--gutter) 90px}
       <div class="tag">Speaking</div>
       <h2>Monica</h2>
       <p>For speaking invitations and stage participation, please connect with Monica.</p>
-      <a class="action" href="mailto:monica@gosummit.ai?subject=Speaking%20Inquiry%20for%20Monica">monica@gosummit.ai</a>
+      <a class="action" href="mailto:monica@agivilla.com?subject=Speaker%20proposal%20%E2%80%94%20%5BYour%20Name%5D%20%28GO%20Summit%202026%29&body=Hi%20Monica%2C%0A%0AI%27d%20like%20to%20propose%20a%20speaking%20slot%20for%20GO%20SUMMIT%202026.%0A%0AName%3A%0ATitle%20%2F%20Company%3A%0AWebsite%20%2F%20LinkedIn%3A%0ACity%20%2F%20cities%20of%20interest%3A%0ATopic%20%2F%20proposed%20talk%20%281-2%20lines%29%3A%0AWhy%20this%20audience%3A%0A%0ABest%2C">monica@agivilla.com</a>
       <div class="photo"><img class="monica" src="../assets/contact-monica.png" alt="Monica" /></div>
     </article>
     <article class="card">
       <div class="tag">Partner & Sponsor</div>
       <h2>Darren</h2>
       <p>For partnership and sponsor collaboration, please connect with Darren.</p>
-      <a class="action" href="mailto:darren@gosummit.ai?subject=Partner%20%26%20Sponsor%20Inquiry%20for%20Darren">darren@gosummit.ai</a>
+      <a class="action" href="mailto:darren@agivilla.com?subject=Sponsor%20inquiry%20%E2%80%94%20%5BCompany%20Name%5D%20%28GO%20Summit%202026%29&body=Hi%20Darren%2C%0A%0AWe%27re%20interested%20in%20sponsoring%20GO%20SUMMIT%202026.%0A%0ACompany%3A%0AWebsite%3A%0AContact%20name%20%2F%20role%3A%0ACity%20%2F%20cities%20of%20interest%3A%0ASponsorship%20goals%20%28brand%20%2F%20leads%20%2F%20partnerships%29%3A%0AApproximate%20budget%20range%3A%0A%0ABest%2C">darren@agivilla.com</a>
       <div class="photo"><img class="darren" src="../assets/contact-darren.png" alt="Darren" /></div>
     </article>
   </section>
 </main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-grid">
+    <div>
+      <h4 style="margin-bottom:14px">GO SUMMIT</h4>
+      <p class="sub">Monthly, in a different city. Build the next global category, with the people actually doing it.</p>
+      <p class="org-ref">Organized by AGI Villa · 2026</p>
+      <a class="partner-cta" href="/partner">Want to partner with us? <span>→</span></a>
+    </div>
+    <div>
+      <h4>EXPLORE</h4>
+      <ul>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#tour">Tour</a></li>
+        <li><a href="/partner">Partner</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>CONNECT</h4>
+      <ul>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="mailto:info@agivilla.com">info@agivilla.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2026 GO SUMMIT. All rights reserved.</span>
+    <span>Designed in Shanghai · Shipped worldwide.</span>
+  </div>
+</footer>
+
 </body>
 </html>
