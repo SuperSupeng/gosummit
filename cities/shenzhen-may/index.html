@@ -159,6 +159,7 @@ footer{padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
 
   <div class="cta-row">
     <a class="btn primary" href="mailto:info@agivilla.com?subject=Notify%20me%20%E2%80%94%20Shenzhen%20%28May%202026%29&body=Hi%20GO%20Summit%20team%2C%0A%0APlease%20notify%20me%20when%20registration%20opens%20for%20GO%20SUMMIT%20Shenzhen%20%28May%202026%29.%0A%0AName%3A%0ATitle%20%2F%20Company%3A%0AEmail%3A%0A%0AThanks%2C">Notify me when registration opens →</a>
+    <a class="btn ghost" id="add-to-calendar" href="#">Add to calendar</a>
     <a class="btn ghost" href="/partner">Sponsor or speak at this stop</a>
   </div>
 </section>
@@ -282,6 +283,31 @@ footer{padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
     <span>Designed in Shanghai · Shipped worldwide.</span>
   </div>
 </footer>
+
+<script>
+(function () {
+  const calendarBtn = document.getElementById("add-to-calendar");
+  if (!calendarBtn) return;
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//GO Summit//Shenzhen 2026//EN",
+    "CALSCALE:GREGORIAN",
+    "BEGIN:VEVENT",
+    "UID:go-summit-shenzhen-20260523@gosummit.ai",
+    "DTSTAMP:20260501T000000Z",
+    "DTSTART:20260523T020000Z",
+    "DTEND:20260523T100000Z",
+    "SUMMARY:GO Summit Shenzhen 2026",
+    "LOCATION:The Westin Shenzhen Nanshan, Shenzhen, China",
+    "DESCRIPTION:GO Summit Shenzhen Edition. From Shenzhen to the World.",
+    "END:VEVENT",
+    "END:VCALENDAR"
+  ];
+  calendarBtn.href = `data:text/calendar;charset=utf-8,${encodeURIComponent(lines.join("\\r\\n"))}`;
+  calendarBtn.download = "go-summit-shenzhen-2026.ics";
+})();
+</script>
 
 </body>
 </html>
