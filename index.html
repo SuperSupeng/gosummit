@@ -419,6 +419,8 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 .sub-form input{flex:1;background:transparent;border:1px solid var(--line-2);color:var(--fg);padding:12px 14px;border-radius:999px;font:inherit;font-size:13px;outline:none;transition:border-color .2s}
 .sub-form input:focus{border-color:var(--fg-soft)}
 .sub-form button{padding:12px 18px;background:var(--fg);color:#000;border-radius:999px;font-weight:500;font-size:13px}
+.sub-form button:disabled{opacity:.55;cursor:not-allowed}
+.sub-status{margin-top:10px;color:var(--fg-dim);font-size:12px;min-height:18px}
 .f-bottom{width:80vw;margin:0 auto;display:flex;justify-content:space-between;padding-top:22px;border-top:1px solid var(--line)}
 
 /* ——— reveal ——— */
@@ -741,6 +743,7 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
         <input id="subscribe-email" type="email" placeholder="you@founder.com" maxlength="254" autocomplete="email" required />
         <button type="submit">Subscribe</button>
       </form>
+      <p id="subscribe-status" class="sub-status" aria-live="polite"></p>
     </div>
     <div>
       <h4>EXPLORE</h4>
@@ -769,16 +772,38 @@ const io = new IntersectionObserver((entries)=>{
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 const subscribeForm = document.getElementById('subscribe-form');
 if (subscribeForm) {
-  subscribeForm.addEventListener('submit', (event) => {
+  subscribeForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const emailInput = document.getElementById('subscribe-email');
+    const status = document.getElementById('subscribe-status');
+    const submitBtn = subscribeForm.querySelector('button[type="submit"]');
     const email = emailInput?.value?.trim();
     if (!emailInput || !email || !emailInput.checkValidity()) return;
-    const subject = encodeURIComponent('GO Summit newsletter subscription');
-    const body = encodeURIComponent(
-      `Hi GO Summit team,\n\nPlease add me to the newsletter list.\n\nEmail: ${email}\nName:\nCompany:\n\nThanks,`
-    );
-    window.location.href = `mailto:info@agivilla.com?subject=${subject}&body=${body}`;
+    const endpoint = window.GO_SUMMIT_SUBSCRIBE_ENDPOINT || '/api/subscribe';
+    try {
+      if (status) status.textContent = '';
+      if (submitBtn) submitBtn.disabled = true;
+      if (endpoint) {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({email, source: 'gosummit-web'})
+        });
+        if (!res.ok) throw new Error(`subscribe failed: ${res.status}`);
+        if (status) status.textContent = 'Subscribed. Welcome to GO Summit updates.';
+        emailInput.value = '';
+        return;
+      }
+      const subject = encodeURIComponent('GO Summit newsletter subscription');
+      const body = encodeURIComponent(
+        `Hi GO Summit team,\n\nPlease add me to the newsletter list.\n\nEmail: ${email}\nName:\nCompany:\n\nThanks,`
+      );
+      window.location.href = `mailto:info@agivilla.com?subject=${subject}&body=${body}`;
+    } catch (_err) {
+      if (status) status.textContent = 'Subscription failed. Please email info@agivilla.com directly.';
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
   });
 }
 </script>

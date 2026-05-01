@@ -59,8 +59,8 @@
 
 ### ⚖️ 你拍板
 
-- [ ] **#23** 部署平台选型  
-  候选：GitHub Pages（当前）/ **Cloudflare Pages**（推荐，含 Functions + Email Routing）/ Vercel
+- [x] **#23** 部署平台选型（已确认 Vercel）  
+  当前选择：Vercel
 - [ ] **#24** 域名邮箱 + 发件方案  
   收件：CF Email Routing（免费转发）/ 飞书企业邮箱 / Google Workspace  
   发件：Resend / Postmark / 飞书机器人  
@@ -76,11 +76,11 @@
   blocked by #20  
   - 替换每页 hero `.btn.primary` 的 mailto 为 `https://lu.ma/<id>` `target="_blank"`
   - 未建的城市保留 Notify-me mailto fallback
-- [ ] **#25** 首页 footer Subscribe 接后端（当前已从假提交改为 mailto 过渡方案）  
-  blocked by #23 #24  
-  当前为 mailto 收集，尚未接 Resend/API
+- [x] **#25** 首页 footer Subscribe 接后端（已完成代码，待 Vercel 环境变量配置）  
+  当前：默认调用 `/api/subscribe`；失败时回退 `mailto`。  
+  Vercel 环境变量：`RESEND_API_KEY`、`RESEND_AUDIENCE_ID`、`RESEND_FROM_EMAIL`
 - [ ] **#27** 城市页 Hero 加 Add to Calendar 按钮（ICS）  
-  blocked by #19  
+  深圳场已完成；其余城市待补（日期/场地确认后逐页加）  
   生成 ICS data URI，按钮放在 hero CTA 行
 
 ### 🚀 部署上线
