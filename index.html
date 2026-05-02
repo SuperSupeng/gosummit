@@ -4,6 +4,18 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>GO Summit 2026 — Just GO.</title>
+<meta name="description" content="GO Summit 2026 is a curated AI and hardware globalization summit tour for founders, investors, operators and ecosystem leaders across China, Asia and global markets.">
+<link rel="canonical" href="https://gosummit.ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GO Summit">
+<meta property="og:title" content="GO Summit 2026 — Just GO.">
+<meta property="og:description" content="GO Summit 2026 is a curated AI and hardware globalization summit tour for founders, investors, operators and ecosystem leaders across China, Asia and global markets.">
+<meta property="og:url" content="https://gosummit.ai/">
+<meta property="og:image" content="https://gosummit.ai/assets/generated/og-go-summit.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GO Summit 2026 — Just GO.">
+<meta name="twitter:description" content="GO Summit 2026 is a curated AI and hardware globalization summit tour for founders, investors, operators and ecosystem leaders across China, Asia and global markets.">
+<meta name="twitter:image" content="https://gosummit.ai/assets/generated/og-go-summit.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -52,16 +64,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:14px;letter-spacing:0;
 }
 .wordmark{display:inline-flex;align-items:center;gap:10px}
-.wordmark-logo{display:block;width:210px;height:68px;background:var(--accent);-webkit-mask-image:url("assets/go-summit-logo.png");-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:left center;-webkit-mask-mode:luminance;mask-image:url("assets/go-summit-logo.png");mask-repeat:no-repeat;mask-size:contain;mask-position:left center;mask-mode:luminance;filter:drop-shadow(0 0 14px rgba(232,116,12,.26));}
+.wordmark-logo{display:block;width:210px;height:68px;background:url("/assets/generated/go-summit-logo-nav.png") no-repeat left center/contain;filter:drop-shadow(0 0 14px rgba(232,116,12,.26))}
 .wordmark .sep{display:inline-block;margin-left:10px;padding-left:12px;border-left:1px solid var(--line-2);font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-dim)}
-.nav ul{display:flex;gap:30px;list-style:none;color:var(--fg-soft)}
+.nav ul{display:flex;gap:20px;list-style:none;color:var(--fg-soft)}
+.nav ul a{font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 .nav ul a{transition:color .2s ease}
 .nav ul a:hover{color:var(--fg)}
+section[id],header[id]{scroll-margin-top:92px}
 
 /* ——— hero ——— */
 .hero{
-  min-height:100vh;padding:140px var(--gutter) 80px;
-  display:flex;flex-direction:column;justify-content:space-between;gap:50px;
+  min-height:92vh;padding:136px var(--gutter) 58px;
+  display:flex;flex-direction:column;justify-content:center;gap:34px;
   position:relative;overflow:hidden;
 }
 .hero::before{
@@ -70,20 +84,26 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   filter:blur(30px);pointer-events:none;
 }
 .hero-top{display:flex;justify-content:space-between;align-items:flex-end;color:var(--fg-soft);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
-.hero-justgo{
- width:min(210px,22vw);
- opacity:.28;
- pointer-events:none;flex:0 0 auto;
- margin-top:8px;
-}
-.hero-justgo img{
-  width:100%;height:auto;display:block;
-  filter:drop-shadow(0 12px 48px rgba(0,0,0,.45));
-}
+.hero-shell{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.72fr);gap:64px;align-items:end;position:relative;z-index:1}
+.hero-kicker{color:var(--accent);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+.hero-title{font-family:var(--serif);font-weight:800;font-size:76px;line-height:.96;letter-spacing:-.02em;max-width:900px}
+.hero-title em{font-style:italic;color:var(--accent);font-weight:500}
+.hero-copy{margin-top:24px;color:var(--fg-soft);font-size:19px;line-height:1.65;max-width:660px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-status{display:inline-flex;align-items:center;gap:12px;margin-top:22px;color:var(--fg-soft);font-size:13px}
+.hero-status span{color:var(--accent);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.hero-status strong{color:var(--fg);font-weight:500}
+.hero-facts{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.hero-facts div{min-height:132px;padding:24px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}
+.hero-facts b{font-family:var(--serif);font-size:46px;line-height:1;color:var(--fg);letter-spacing:-.02em;font-weight:700}
+.hero-facts b em{font-style:italic;color:var(--accent);font-weight:500}
+.hero-facts span{color:var(--fg-soft);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.hero-proof{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;color:var(--fg-soft);font-size:13px}
+.hero-proof strong{color:var(--fg);font-weight:500}
 
 /* ——— photo wall (between nav and city ticker) ——— */
 .photo-wall{
-  margin-top:32px;
+  margin-top:22px;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
   overflow:hidden;position:relative;
@@ -161,9 +181,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   display:grid;grid-template-columns:1.2fr .8fr;gap:40px;
   margin-top:16px;align-items:end;
 }
-.hero-sub-left{display:flex;align-items:flex-end;gap:26px}
+.hero-sub-left{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,210px);align-items:end;gap:26px}
 .hero-lede{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,2vw,28px);line-height:1.35;max-width:560px;color:var(--fg)}
 .hero-lede span{font-style:normal;color:var(--fg-soft)}
+.hero-justgo{justify-self:center;align-self:center}
 .hero-meta{
   display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));
   gap:16px 34px;color:var(--fg-soft);font-size:13px;justify-content:flex-end;
@@ -219,6 +240,40 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   color:var(--fg-dim);display:inline-flex;align-items:center;gap:10px;
 }
 .eyebrow::before{content:"";width:20px;height:1px;background:var(--fg-dim)}
+
+/* ——— conference system ——— */
+.conf-section{border-top:1px solid var(--line);padding:120px var(--gutter)}
+.conf-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:60px;align-items:end;margin-bottom:54px}
+.conf-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(38px,5.4vw,78px);line-height:1;letter-spacing:-.02em}
+.conf-head h2 em{font-style:italic;color:var(--accent);font-weight:500}
+.conf-head p{color:var(--fg-soft);font-size:17px;line-height:1.7;max-width:58ch}
+.track-grid,.experience-grid,.audience-grid{display:grid;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.track-grid{grid-template-columns:repeat(5,1fr)}
+.experience-grid{grid-template-columns:repeat(3,1fr)}
+.audience-grid{grid-template-columns:repeat(4,1fr)}
+.track-card,.experience-card,.audience-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 26px;min-height:230px;background:rgba(255,255,255,.006);transition:background .25s,border-color .25s}
+.track-card:hover,.experience-card:hover,.audience-card:hover{background:rgba(232,116,12,.045);border-color:rgba(232,116,12,.18)}
+.track-card .num,.experience-card .format,.audience-card .role{display:block;color:var(--accent);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;margin-bottom:22px}
+.track-card h3,.experience-card h3,.audience-card h3{font-family:var(--serif);font-weight:600;font-size:clamp(24px,2.6vw,36px);line-height:1.08;letter-spacing:-.015em;margin-bottom:16px}
+.track-card p,.experience-card p,.audience-card p{color:var(--fg-soft);font-size:14px;line-height:1.62}
+.experience-card{min-height:250px}
+.audience-card{min-height:210px}
+.mini-link{display:inline-flex;margin-top:18px;color:var(--fg);font-size:13px;font-weight:600}
+.mini-link:hover{color:var(--accent)}
+
+/* ——— confirmed stop / why ——— */
+.confirmed-stop{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px var(--gutter);background:rgba(255,255,255,.012)}
+.confirmed-inner{width:80vw;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:44px;align-items:center}
+.confirmed-label{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+.confirmed-label::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(232,116,12,.75)}
+.confirmed-title{font-family:var(--serif);font-weight:700;font-size:44px;line-height:1.06;letter-spacing:-.02em}
+.confirmed-copy{color:var(--fg-soft);font-size:16px;line-height:1.7;margin-top:12px;max-width:760px}
+.confirmed-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.why-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 30px;min-height:270px}
+.why-card span{display:block;color:var(--accent);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:24px}
+.why-card h3{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.08;letter-spacing:-.015em;margin-bottom:18px}
+.why-card p{color:var(--fg-soft);font-size:15px;line-height:1.7}
 
 /* ——— manifesto ——— */
 .manifesto{padding-top:180px;padding-bottom:180px}
@@ -345,11 +400,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .tour-card{padding:32px 26px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px;color:var(--fg-soft);transition:background .25s,color .25s,border-color .25s;position:relative;min-height:200px}
 .tour-card:nth-child(3n){border-right:0}
 .tour-card:hover{background:rgba(232,116,12,.05);color:var(--fg);border-color:rgba(232,116,12,.18)}
+.tour-card.disabled{cursor:default;pointer-events:none;opacity:.72}
+.tour-card.disabled:hover{background:transparent;color:var(--fg-soft);border-color:var(--line)}
 .tour-card .tc-month{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:14px;letter-spacing:.02em}
 .tour-card .tc-city{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1;letter-spacing:-.01em;color:inherit;margin-top:2px}
 .tour-card .tc-tag{font-size:13px;color:var(--fg-dim);margin-top:8px;flex:1}
 .tour-card .tc-arrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-soft);margin-top:8px}
 .tour-card.flagship::after{content:"FLAGSHIP";position:absolute;top:18px;right:18px;font-size:9px;letter-spacing:.22em;color:var(--accent);font-weight:600;border:1px solid rgba(232,116,12,.4);padding:4px 8px;border-radius:999px}
+.tour-card.confirmed{background:rgba(232,116,12,.045);color:var(--fg);border-color:rgba(232,116,12,.22)}
+.tour-card.confirmed::after{content:"CONFIRMED";position:absolute;top:18px;right:18px;font-size:9px;letter-spacing:.22em;color:var(--accent);font-weight:700;border:1px solid rgba(232,116,12,.42);padding:4px 8px;border-radius:999px}
 @media (max-width:1024px){.tour-grid{grid-template-columns:repeat(2,1fr)}.tour-card:nth-child(3n){border-right:1px solid var(--line)}.tour-card:nth-child(2n){border-right:0}}
 @media (max-width:600px){.tour-grid{grid-template-columns:1fr}.tour-card{border-right:0!important}}
 
@@ -366,9 +425,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .org-logo{flex:1;display:flex;justify-content:flex-start}
 .org-logo img{height:56px;width:auto;filter:none}
 .p-wall{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:1px solid var(--line)}
-.p-wall div{height:120px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--fg-dim);font-size:14px;letter-spacing:.02em;transition:color .3s, background .3s}
-.p-wall div:nth-child(6n){border-right:0}
-.p-wall div:hover{color:var(--fg);background:rgba(255,255,255,.02)}
+.p-wall .partner-logo{height:120px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:22px;transition:background .3s, opacity .3s}
+.p-wall .partner-logo:nth-child(6n){border-right:0}
+.p-wall .partner-logo:hover{background:rgba(255,255,255,.02)}
+.p-wall .partner-logo img{max-width:100%;max-height:74px;width:auto;height:auto;object-fit:contain;opacity:.9;transition:opacity .3s, transform .3s}
+.p-wall .partner-logo:hover img{opacity:1;transform:translateY(-1px)}
+.p-wall .partner-logo img.logo-wave{transform:translateX(7px)}
+.p-wall .partner-logo:hover img.logo-wave{transform:translate(7px,-1px)}
+.supporting-note{margin-top:22px;color:var(--fg-soft);font-size:14px;line-height:1.7;max-width:760px}
 
 /* ——— cta ——— */
 .cta{border-top:1px solid var(--line);padding:180px var(--gutter);text-align:center;position:relative;overflow:hidden}
@@ -420,6 +484,7 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 .sub-form input:focus{border-color:var(--fg-soft)}
 .sub-form button{padding:12px 18px;background:var(--fg);color:#000;border-radius:999px;font-weight:500;font-size:13px}
 .sub-form button:disabled{opacity:.55;cursor:not-allowed}
+.sub-hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 .sub-status{margin-top:10px;color:var(--fg-dim);font-size:12px;min-height:18px}
 .f-bottom{width:80vw;margin:0 auto;display:flex;justify-content:space-between;padding-top:22px;border-top:1px solid var(--line)}
 
@@ -430,6 +495,16 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 /* ——— responsive ——— */
 @media (max-width:1024px){
   .manifesto-grid{grid-template-columns:1fr;gap:32px}
+  .hero-shell{grid-template-columns:1fr;gap:34px}
+  .hero-title{font-size:58px}
+  .hero-facts{grid-template-columns:repeat(3,1fr)}
+  .confirmed-inner{grid-template-columns:1fr;gap:24px}
+  .confirmed-actions{justify-content:flex-start}
+  .conf-head{grid-template-columns:1fr;gap:24px}
+  .track-grid{grid-template-columns:repeat(2,1fr)}
+  .experience-grid,.audience-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr}
+  .why-card{min-height:0}
   .stop{padding:0 36px;gap:18px}
   .format-grid{grid-template-columns:1fr}
   .v{width:min(560px,78vw);min-height:260px}
@@ -437,8 +512,8 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   .nums-grid{grid-template-columns:repeat(2,1fr)}
   .nums-grid > div:nth-child(2n){border-right:0}
   .p-wall{grid-template-columns:repeat(3,1fr)}
-  .p-wall div:nth-child(6n){border-right:1px solid var(--line)}
-  .p-wall div:nth-child(3n){border-right:0}
+  .p-wall .partner-logo:nth-child(6n){border-right:1px solid var(--line)}
+  .p-wall .partner-logo:nth-child(3n){border-right:0}
   .f-grid{grid-template-columns:1fr 1fr;gap:30px}
   .hero-sub{grid-template-columns:1fr}
   .hero-meta{grid-template-columns:repeat(2,minmax(120px,1fr));justify-content:flex-start}
@@ -448,11 +523,25 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
 }
 @media (max-width:600px){
   :root{--gutter:6vw}
+  section[id],header[id]{scroll-margin-top:86px}
   .section{padding:90px var(--gutter)}
+  .conf-section{padding:90px var(--gutter)}
+  .hero-title{font-size:43px}
+  .hero-copy{font-size:16px}
+  .hero-facts{grid-template-columns:repeat(2,1fr)}
+  .hero-facts div{min-height:112px;padding:20px 16px}
+  .hero-facts b{font-size:36px}
+  .hero-proof{align-items:flex-start;flex-direction:column;gap:6px}
+  .confirmed-stop{padding:38px var(--gutter)}
+  .confirmed-title{font-size:34px}
+  .confirmed-inner{width:88vw}
+  .why-card{padding:28px 22px}
+  .track-grid,.experience-grid,.audience-grid{grid-template-columns:1fr}
+  .track-card,.experience-card,.audience-card{min-height:0;padding:26px 22px}
   .hero{padding:110px var(--gutter) 60px}
   .photo-item{width:250px;height:152px}
-  .hero-sub-left{display:block}
-  .hero-justgo{width:min(170px,44vw);opacity:.24;margin-top:14px}
+  .hero-sub-left{display:grid;grid-template-columns:1fr;gap:18px}
+  .hero-justgo{width:min(170px,44vw);opacity:.24;margin:0;justify-self:start}
   .why-now{margin-top:30px;padding-top:30px}
   .why-copy{font-size:15px}
   .v{width:84vw;padding:26px 22px;min-height:220px}
@@ -461,6 +550,10 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   .tour-head .meta{text-align:left}
   .f-grid{grid-template-columns:1fr}
   .organizer{flex-direction:column;align-items:flex-start;gap:20px}
+  .p-wall{grid-template-columns:repeat(2,1fr)}
+  .p-wall .partner-logo{height:104px;padding:18px}
+  .p-wall .partner-logo:nth-child(3n){border-right:1px solid var(--line)}
+  .p-wall .partner-logo:nth-child(2n){border-right:0}
   .stops{padding:36px 0}
   .stop{padding:0 28px;gap:14px}
   .stop .month{font-size:28px}
@@ -476,33 +569,42 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   <div class="nav-inner">
     <a href="#top" class="wordmark" aria-label="GO Summit"><span class="wordmark-logo" aria-hidden="true"></span><span class="sep">WORLD TOUR 2026-2027</span></a>
     <ul>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#tour">TOUR</a></li>
-      <li><a href="/partner">PARTNER</a></li>
-      <li><a href="/contact">CONTACT</a></li>
+      <li><a href="#about">WHY</a></li>
+      <li><a href="#tracks">TRACKS</a></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#shenzhen">SHENZHEN</a></li>
+      <li><a href="#partners">PARTNERS</a></li>
+      <li><a href="/speak-sponsor">SPEAK / SPONSOR</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
+  <div class="hero-shell">
+    <div>
+      <div class="hero-kicker">GO SUMMIT 2026 · AI EXPANSION TOUR</div>
+      <h1 class="hero-title">The AI expansion summit for builders <em>going global.</em></h1>
+      <p class="hero-copy">A curated two-day summit and industry tour connecting AI founders, hardware builders, investors and operators with the markets, capital and partners behind global expansion.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="/cities/shenzhen-may/">View Shenzhen stop <span>→</span></a>
+        <a class="btn ghost" href="/speak-sponsor">Apply to speak / sponsor</a>
+      </div>
+      <a class="hero-status" href="/cities/shenzhen-may/"><span>Confirmed stop</span><strong>Shenzhen · May 2026</strong></a>
+    </div>
+    <div class="hero-facts" aria-label="GO Summit facts">
+      <div><b>9</b><span>planned stops</span></div>
+      <div><b>1</b><span>confirmed stop</span></div>
+      <div><b>5</b><span>program tracks</span></div>
+      <div><b>2</b><span>forum sessions</span></div>
+      <div><b>AI</b><span>+ hardware</span></div>
+      <div><b>Global</b><span>capital</span></div>
+    </div>
+  </div>
 
-  <div class="hero-sub">
-    <div class="hero-sub-left reveal">
-      <p class="hero-lede">
-        A year-long expedition for founders building the next global category —
-        <span>from China, with the world.</span>
-      </p>
-      <div class="hero-justgo"><img src="assets/just-go-logo-transparent.png" alt="Just GO" /></div>
-    </div>
-    <div class="hero-meta reveal">
-      <div><b>12</b><span>cities</span></div>
-      <div><b>12</b><span>months</span></div>
-      <div><b>5,000<em>+</em></b><span>founders</span></div>
-      <div><b>600<em>+</em></b><span>investors</span></div>
-      <div><b>30</b><span>markets</span></div>
-      <div><b>100M<em>+</em></b><span>content impressions</span></div>
-    </div>
+  <div class="hero-proof">
+    <span><strong>What it is:</strong> summit stage + closed-door rooms + investor meetings + company visits</span>
+    <span><strong>Who it is for:</strong> founders going global, investors tracking AI deal flow, operators and ecosystem partners</span>
   </div>
 
   <div class="photo-wall reveal" aria-label="GO Summit event photo wall">
@@ -525,108 +627,227 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
       <div class="photo-item"><img src="assets/photos/8.png" alt="" aria-hidden="true" /></div>
     </div>
   </div>
+</header>
 
-  <div id="agenda" class="marquee reveal" aria-label="2026 World Tour schedule">
-    <div class="marquee-track">
-      <div class="marquee-item"><span class="m">Apr</span><span class="c">Shanghai</span></div>
-      <div class="marquee-item"><span class="m">May</span><span class="c">Shenzhen</span></div>
-      <div class="marquee-item"><span class="m">Jun</span><span class="c">Singapore</span></div>
-      <div class="marquee-item"><span class="m">Jul</span><span class="c">Shanghai &middot; WAIC</span></div>
-      <div class="marquee-item"><span class="m">Aug</span><span class="c">Hongkong</span></div>
-      <div class="marquee-item"><span class="m">Sep</span><span class="c">Hangzhou</span></div>
-      <div class="marquee-item"><span class="m">Oct</span><span class="c">Singapore</span></div>
-      <div class="marquee-item"><span class="m">Nov</span><span class="c">Shenzhen</span></div>
-      <div class="marquee-item flag"><span class="m">Dec</span><span class="c">Dubai</span></div>
-      <div class="marquee-item"><span class="m">Apr</span><span class="c">Shanghai</span></div>
-      <div class="marquee-item"><span class="m">May</span><span class="c">Shenzhen</span></div>
-      <div class="marquee-item"><span class="m">Jun</span><span class="c">Singapore</span></div>
-      <div class="marquee-item"><span class="m">Jul</span><span class="c">Shanghai &middot; WAIC</span></div>
-      <div class="marquee-item"><span class="m">Aug</span><span class="c">Hongkong</span></div>
-      <div class="marquee-item"><span class="m">Sep</span><span class="c">Hangzhou</span></div>
-      <div class="marquee-item"><span class="m">Oct</span><span class="c">Singapore</span></div>
-      <div class="marquee-item"><span class="m">Nov</span><span class="c">Shenzhen</span></div>
-      <div class="marquee-item flag"><span class="m">Dec</span><span class="c">Dubai</span></div>
+<!-- CONFIRMED STOP -->
+<section id="shenzhen" class="confirmed-stop">
+  <div class="confirmed-inner">
+    <div class="reveal">
+      <div class="confirmed-label">Confirmed first stop</div>
+      <h2 class="confirmed-title">Shenzhen · May 2026</h2>
+      <p class="confirmed-copy">Shenzhen is the first confirmed stop, focused on AI hardware, robotics, EV supply chains and advanced manufacturing. The program pairs a summit forum with direct access to the city’s builder ecosystem.</p>
+    </div>
+    <div class="confirmed-actions reveal">
+      <a class="btn primary" href="/cities/shenzhen-may/">View Shenzhen <span>→</span></a>
+      <a class="btn ghost" href="mailto:info@agivilla.com?subject=Notify%20me%20%E2%80%94%20Shenzhen%20%28May%202026%29&body=Hi%20GO%20Summit%20team%2C%0A%0APlease%20notify%20me%20when%20registration%20opens%20for%20GO%20SUMMIT%20Shenzhen%20%28May%202026%29.%0A%0AName%3A%0ATitle%20%2F%20Company%3A%0AEmail%3A%0A%0AThanks%2C">Get notified</a>
     </div>
   </div>
+</section>
 
-  <section id="about" class="why-now reveal" aria-label="Why now narrative">
-    <h3>WHY <em>NOW</em></h3>
-    <div class="why-copy">
-      <p>China is now the primary operating market for AI and advanced manufacturing — foundation models, compute, robotics, EV and new-energy supply chains, embodied AI and the wider hard-tech stack are all moving at a cadence the rest of the world can no longer observe from a distance. At the same time, governments, associations, industrial capital and industry organisations around the world are actively looking for more structured, continuous ways to plug into the Chinese innovation ecosystem — no longer through one-off delegation visits, but through ongoing working relationships with the founders, investors and operators who actually build.</p>
-
-      <strong>AGI Villa — the bridge</strong>
-      <p>AGI Villa exists to be exactly that bridge. We are not a Chinese-only founder community; we are an open, inclusive international platform — a stage designed to bring Chinese founders, international operators, policymakers and global capital into the same room, the same conversation, and the same long-term working relationship.</p>
-
-      <strong>GO SUMMIT 2026 — the bridge, in flagship form</strong>
-      <p>GO SUMMIT is AGI Villa's annual flagship convening — the most concentrated expression of that bridge each year. Under the banner “Just GO”, the 2026-2027 edition runs as a world tour, moving across the four markets that define the next decade of AI and advanced manufacturing: Greater China, Southeast Asia, the Middle East and the West.</p>
-      <p>Each stop is a two-day programme — SUMMIT + Industry Tour. Day One is the Industry Tour: on-site visits to leading AI, robotics and advanced-manufacturing companies, with face-to-face, deep-dive exchange between the touring delegation and the founders, researchers and operators on the ground. Day Two is the Summit: keynotes, closed-door founder roundtables, investor matchmaking, policy briefings and a signature evening salon.</p>
+<!-- WHY -->
+<section id="about" class="conf-section">
+  <div class="wrap">
+    <div class="conf-head">
+      <h2 class="reveal">Why this summit <em>exists now.</em></h2>
+      <p class="reveal">AI is becoming industrial, physical and global at the same time. GO Summit gives founders, investors and operators a practical way to understand China and Asia from inside the rooms where builders are actually working.</p>
     </div>
-  </section>
+    <div class="why-grid">
+      <article class="why-card reveal">
+        <span>Market signal</span>
+        <h3>China is where AI meets supply-chain reality.</h3>
+        <p>Models, robotics, EV supply chains, embodied AI and advanced manufacturing are moving too quickly to understand from the outside.</p>
+      </article>
+      <article class="why-card reveal">
+        <span>Bridge</span>
+        <h3>AGI Villa connects builders across borders.</h3>
+        <p>The platform brings Chinese founders, international operators, ecosystem leaders and global capital into the same long-term working relationship.</p>
+      </article>
+      <article class="why-card reveal">
+        <span>Format</span>
+        <h3>Each stop is built for work.</h3>
+        <p>The format combines stage content, closed-door roundtables, investor access, local market context and company visits.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-</header>
+<!-- TRACKS -->
+<section id="tracks" class="conf-section">
+  <div class="wrap">
+    <div class="conf-head">
+      <h2 class="reveal">Five questions every AI founder must answer <em>before going global.</em></h2>
+      <p class="reveal">The program is built around the practical decisions behind global expansion: product, supply chain, infrastructure, capital, market access and operating playbooks.</p>
+    </div>
+    <div class="track-grid">
+      <article class="track-card reveal">
+        <span class="num">Track 01</span>
+        <h3>Cross-border GTM</h3>
+        <p>Market entry, localization, overseas operations, distribution channels and the operating lessons behind cross-border growth.</p>
+      </article>
+      <article class="track-card reveal">
+        <span class="num">Track 02</span>
+        <h3>Robotics &amp; Physical AI</h3>
+        <p>Embodied AI, humanoids, industrial automation, EV supply chains and the manufacturing stack behind real-world intelligence.</p>
+      </article>
+      <article class="track-card reveal">
+        <span class="num">Track 03</span>
+        <h3>Infrastructure for AI Products</h3>
+        <p>Compute, model deployment, data systems, agent infrastructure and the technical foundations needed to scale AI products.</p>
+      </article>
+      <article class="track-card reveal">
+        <span class="num">Track 04</span>
+        <h3>Capital &amp; Ecosystem Access</h3>
+        <p>Founder-investor matching, strategic capital, corporate innovation, policy signals and ecosystem access across Asia.</p>
+      </article>
+      <article class="track-card reveal">
+        <span class="num">Track 05</span>
+        <h3>Founder Operating Playbooks</h3>
+        <p>Operating stories from builders: product-market fit, hiring, pricing, sales, partnerships and the hard calls behind category creation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="conf-section">
+  <div class="wrap">
+    <div class="conf-head">
+      <h2 class="reveal">Designed for meetings, not just stage time.</h2>
+      <p class="reveal">The experience is built around formats that make it easier to meet the right people: stage signal, closed-door depth, investor access, local market context and field visits into the host city’s AI ecosystem.</p>
+    </div>
+    <div class="experience-grid">
+      <article class="experience-card reveal">
+        <span class="format">Main stage</span>
+        <h3>Keynotes &amp; fireside talks</h3>
+        <p>Founder, investor and operator perspectives on the shifts that matter for AI, robotics, infrastructure and global expansion.</p>
+      </article>
+      <article class="experience-card reveal">
+        <span class="format">Closed rooms</span>
+        <h3>Founder roundtables</h3>
+        <p>Curated conversations where builders share real operating problems, not polished success stories.</p>
+      </article>
+      <article class="experience-card reveal">
+        <span class="format">Capital</span>
+        <h3>Investor office hours</h3>
+        <p>Structured founder-investor touchpoints for fundraising, market feedback, partnership discovery and follow-up introductions.</p>
+      </article>
+      <article class="experience-card reveal">
+        <span class="format">Field work</span>
+        <h3>Company visits</h3>
+        <p>On-site exchanges with AI, robotics and advanced-manufacturing teams in each host city.</p>
+      </article>
+      <article class="experience-card reveal">
+        <span class="format">Network</span>
+        <h3>Partner dinners</h3>
+        <p>High-signal evening salons for speakers, sponsors, investors and ecosystem partners to continue the conversation.</p>
+      </article>
+      <article class="experience-card reveal">
+        <span class="format">Local access</span>
+        <h3>City ecosystem briefings</h3>
+        <p>Practical context on policy, talent, capital, industrial clusters and market opportunities in each stop.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section id="audience" class="conf-section">
+  <div class="wrap">
+    <div class="conf-head">
+      <h2 class="reveal">Choose the outcome <em>you are here for.</em></h2>
+      <p class="reveal">Each group comes for a different reason. GO Summit keeps those paths explicit so attendees, speakers, sponsors and ecosystem partners can quickly see where they fit.</p>
+    </div>
+    <div class="audience-grid">
+      <article class="audience-card reveal">
+        <span class="role">Founders</span>
+        <h3>Find the next market</h3>
+        <p>Meet investors, operators, partners and local ecosystem leaders who can help turn expansion plans into execution.</p>
+        <a class="mini-link" href="/cities/shenzhen-may/">View confirmed stop →</a>
+      </article>
+      <article class="audience-card reveal">
+        <span class="role">Investors</span>
+        <h3>See deal flow early</h3>
+        <p>Track AI founders across China and Asia through curated rooms, founder showcases and direct introductions.</p>
+        <a class="mini-link" href="mailto:info@agivilla.com?subject=Investor%20interest%20%E2%80%94%20GO%20Summit%202026&body=Hi%20GO%20Summit%20team%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20investor%20participation%20for%20GO%20SUMMIT%202026.%0A%0AName%3A%0AFund%20/%20firm%3A%0AFocus%20areas%3A%0ACities%20of%20interest%3A%0A%0ABest%2C">Register interest →</a>
+      </article>
+      <article class="audience-card reveal">
+        <span class="role">Sponsors</span>
+        <h3>Lead the category conversation</h3>
+        <p>Reach AI builders, founders, investors and operators through high-context programming instead of passive logo placement.</p>
+        <a class="mini-link" href="/speak-sponsor">Sponsor the tour →</a>
+      </article>
+      <article class="audience-card reveal">
+        <span class="role">Speakers</span>
+        <h3>Share real operating insight</h3>
+        <p>Bring a hands-on perspective on building, scaling, investing or entering new markets in the AI era.</p>
+        <a class="mini-link" href="/speak-sponsor">Apply to speak →</a>
+      </article>
+    </div>
+  </div>
+</section>
 
 <!-- TOUR -->
 <section id="tour" class="section tour-section">
   <div class="wrap">
     <div class="tour-section-head">
-      <h2 class="reveal">The <em>2026 World Tour.</em></h2>
-      <div class="meta reveal">Nine cities · twelve months · one cohort moving with us.</div>
+      <h2 class="reveal">The <em>2026 route.</em></h2>
+      <div class="meta reveal">Shenzhen confirmed · additional stops opening soon.</div>
     </div>
     <div class="tour-grid">
-      <a class="tour-card reveal" href="/cities/shanghai-apr/">
+      <div class="tour-card reveal disabled" aria-disabled="true">
         <span class="tc-month">April 2026 · Opener</span>
         <span class="tc-city">Shanghai</span>
-        <span class="tc-tag">Spring kickoff · the cohort meets</span>
-        <span class="tc-arrow">View stop →</span>
-      </a>
-      <a class="tour-card reveal" href="/cities/shenzhen-may/">
-        <span class="tc-month">May 2026</span>
+        <span class="tc-tag">Coming soon</span>
+        <span class="tc-arrow">Coming soon</span>
+      </div>
+      <a class="tour-card reveal confirmed" href="/cities/shenzhen-may/">
+        <span class="tc-month">May 2026 · Confirmed</span>
         <span class="tc-city">Shenzhen</span>
         <span class="tc-tag">Robotics · EV · embodied AI</span>
-        <span class="tc-arrow">View stop →</span>
+        <span class="tc-arrow">View confirmed stop →</span>
       </a>
-      <a class="tour-card reveal" href="/cities/singapore-jun/">
+      <div class="tour-card reveal disabled" aria-disabled="true">
         <span class="tc-month">June 2026</span>
         <span class="tc-city">Singapore</span>
-        <span class="tc-tag">SEA gateway · cross-border</span>
-        <span class="tc-arrow">View stop →</span>
-      </a>
-      <a class="tour-card reveal" href="/cities/shanghai-jul/">
+        <span class="tc-tag">Coming soon</span>
+        <span class="tc-arrow">Coming soon</span>
+      </div>
+      <div class="tour-card reveal disabled" aria-disabled="true">
         <span class="tc-month">July 2026 · WAIC</span>
         <span class="tc-city">Shanghai</span>
-        <span class="tc-tag">Foundation models · WAIC week</span>
-        <span class="tc-arrow">View stop →</span>
-      </a>
-      <a class="tour-card reveal" href="/cities/hongkong-aug/">
+        <span class="tc-tag">Coming soon</span>
+        <span class="tc-arrow">Coming soon</span>
+      </div>
+      <div class="tour-card reveal disabled" aria-disabled="true">
         <span class="tc-month">August 2026</span>
-        <span class="tc-city">Hongkong</span>
-        <span class="tc-tag">Capital · deal flow</span>
-        <span class="tc-arrow">View stop →</span>
-      </a>
-      <a class="tour-card reveal" href="/cities/hangzhou-sep/">
+        <span class="tc-city">Hong Kong</span>
+        <span class="tc-tag">Coming soon</span>
+        <span class="tc-arrow">Coming soon</span>
+      </div>
+      <div class="tour-card reveal disabled" aria-disabled="true">
         <span class="tc-month">September 2026</span>
         <span class="tc-city">Hangzhou</span>
-        <span class="tc-tag">Consumer AI · agents</span>
-        <span class="tc-arrow">View stop →</span>
-      </a>
-      <a class="tour-card reveal" href="/cities/singapore-oct/">
+        <span class="tc-tag">Coming soon</span>
+        <span class="tc-arrow">Coming soon</span>
+      </div>
+      <div class="tour-card reveal disabled" aria-disabled="true">
         <span class="tc-month">October 2026</span>
         <span class="tc-city">Singapore</span>
-        <span class="tc-tag">SEA · second pass</span>
-        <span class="tc-arrow">View stop →</span>
-      </a>
-      <a class="tour-card reveal" href="/cities/shenzhen-nov/">
+        <span class="tc-tag">Coming soon</span>
+        <span class="tc-arrow">Coming soon</span>
+      </div>
+      <div class="tour-card reveal disabled" aria-disabled="true">
         <span class="tc-month">November 2026</span>
         <span class="tc-city">Shenzhen</span>
-        <span class="tc-tag">Hardware · second pass</span>
-        <span class="tc-arrow">View stop →</span>
-      </a>
-      <a class="tour-card reveal flagship" href="/cities/dubai-dec/">
-        <span class="tc-month">December 2026 · Flagship</span>
+        <span class="tc-tag">Coming soon</span>
+        <span class="tc-arrow">Coming soon</span>
+      </div>
+      <div class="tour-card reveal disabled" aria-disabled="true">
+        <span class="tc-month">December 2026</span>
         <span class="tc-city">Dubai</span>
-        <span class="tc-tag">Middle East · year-end summit</span>
-        <span class="tc-arrow">View stop →</span>
-      </a>
+        <span class="tc-tag">Coming soon</span>
+        <span class="tc-arrow">Coming soon</span>
+      </div>
     </div>
   </div>
 </section>
@@ -696,39 +917,63 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   </div>
 </section>
 
-<!-- PARTNERS -->
+<!-- SUPPORTING PARTNERS -->
 <section id="partners" class="partners">
   <div class="wrap">
     <div class="p-head">
-      <h2 class="reveal">Organizer &amp; <em>partners.</em></h2>
-      <div class="eyebrow reveal">A founding circle in formation</div>
+      <h2 class="reveal">Organizer &amp; <em>supporting partners.</em></h2>
+      <div class="eyebrow reveal">Community, media and ecosystem support</div>
     </div>
 
     <div class="organizer reveal">
       <div class="org-label">Organized by</div>
-      <div class="org-logo"><a href="https://www.agivilla.com" target="_blank" rel="noopener noreferrer"><img src="assets/agivilla-white-logo.png" alt="AGI Villa" /></a></div>
+      <div class="org-logo"><a href="https://www.agivilla.com" target="_blank" rel="noopener noreferrer"><img src="assets/generated/agivilla-white-logo-transparent.png" alt="AGI Villa" /></a></div>
     </div>
 
     <div class="p-wall">
-      <div>Partner 01</div><div>Partner 02</div><div>Partner 03</div>
-      <div>Partner 04</div><div>Partner 05</div><div>Partner 06</div>
-      <div>Partner 07</div><div>Partner 08</div><div>Partner 09</div>
-      <div>Partner 10</div><div>Partner 11</div><div>Partner 12</div>
+      <div class="partner-logo"><img src="assets/partners/normalized/01-cmi-community.png" alt="CMI Community" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/02-hft.png" alt="HFT" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/03-nnc.png" alt="NNC" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/04-rebuild-z.png" alt="Rebuild-Z" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/05-s-chuang.png" alt="S Chuang" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/06-tgo-global-ai-group.png" alt="TGO Global AI Group" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/07-datawhale.png" alt="Datawhale" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/08-founder-park.png" alt="Founder Park" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/09-hackathon-weekly.png" alt="Hackathon Weekly" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/10-linkloud.png" alt="Linkloud" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img class="logo-wave" src="assets/partners/normalized/11-wave.png" alt="WAVE" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/12-waytoagi.png" alt="WaytoAGI" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/13-yitang.png" alt="YiTang" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/14-chuhai-fenzi-fenmu.png" alt="Chuhai Fenzi Fenmu" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/15-chuhaiqu.png" alt="Chuhaiqu" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/16-seamate.png" alt="SEAMATE" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/17-chuhai-xiangduilun.png" alt="Chuhai Xiangduilun" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/18-zifeng-community.png" alt="Zifeng Community" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/19-kaiyuanshe.png" alt="Kaiyuanshe" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/20-between.png" alt="Between" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/21-youxin.png" alt="Youxin" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/22-hangzhou-ai-workshop.png" alt="Hangzhou AI Workshop" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/23-foundation-model-innovation-center.png" alt="Shanghai Foundation Model Innovation Center" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/24-aigents.png" alt="Aigents" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/25-agent-universe.png" alt="Agent Universe" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/26-guixingren.png" alt="Guixingren" loading="lazy" decoding="async" /></div>
+      <div class="partner-logo"><img src="assets/partners/normalized/27-guansha-insights.png" alt="Guansha Insights" loading="lazy" decoding="async" /></div>
     </div>
     <div class="reveal" style="margin-top:32px;display:flex;justify-content:flex-end">
-      <a href="/partner" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border:1px solid var(--line-2);border-radius:999px;font-size:14px;color:var(--fg);transition:border-color .2s,color .2s">Become a partner <span>→</span></a>
+      <a href="mailto:info@agivilla.com?subject=Supporting%20Partner%20application%20%E2%80%94%20%5BOrganization%20Name%5D%20%28GO%20Summit%202026%29&body=Hi%20GO%20Summit%20team%2C%0A%0AWe%27d%20like%20to%20explore%20becoming%20a%20supporting%20partner%20for%20GO%20SUMMIT%202026.%0A%0AOrganization%3A%0AWebsite%3A%0AContact%20name%20%2F%20role%3A%0ACommunity%20%2F%20media%20%2F%20ecosystem%20focus%3A%0ACity%20or%20region%20where%20we%20can%20help%3A%0AHow%20we%27d%20like%20to%20support%3A%0A%0ABest%2C" style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border:1px solid var(--line-2);border-radius:999px;font-size:14px;color:var(--fg);transition:border-color .2s,color .2s">Become a supporting partner <span>→</span></a>
     </div>
+    <p class="supporting-note reveal">These are community, media and ecosystem supporters helping GO Summit reach builders across China and Asia. Sponsor and speaker applications are handled separately.</p>
   </div>
 </section>
 
 <!-- CTA -->
 <section id="apply" class="cta">
   <div class="kicker-big reveal">Ready?</div>
-  <h2 class="slogan reveal"><img src="assets/just-go-logo-transparent.png" alt="Just GO — GO Summit" /></h2>
-  <p class="reveal">Applications open for speakers, delegates and founding partners of the 2026 tour. Rolling review.</p>
+  <h2 class="slogan reveal"><img src="assets/generated/just-go-logo-transparent.png" alt="Just GO — GO Summit" /></h2>
+  <p class="reveal">Shenzhen is the first confirmed stop. Speaker, sponsor and delegate interest is reviewed on a rolling basis.</p>
   <div class="cta-row reveal">
-    <a class="btn primary" href="#tour">Pick your city <span>→</span></a>
-    <a class="btn ghost" href="/partner">Speak or sponsor</a>
+    <a class="btn primary" href="/cities/shenzhen-may/">View Shenzhen <span>→</span></a>
+    <a class="btn ghost" href="/speak-sponsor">Speak or sponsor</a>
   </div>
 </section>
 
@@ -737,17 +982,19 @@ footer{border-top:1px solid var(--line);padding:60px var(--gutter) 40px;color:va
   <div class="f-grid">
     <div>
       <h4 style="margin-bottom:14px">GO SUMMIT</h4>
-      <p class="sub">Monthly, in a different city. Build the next global category, with the people actually doing it.</p>
+      <p class="sub">A curated AI expansion summit tour across China, Asia and global markets, organized by AGI Villa.</p>
       <p class="org-ref">Organized by AGI Villa · 2026</p>
       <form id="subscribe-form" class="sub-form">
         <input id="subscribe-email" type="email" placeholder="you@founder.com" maxlength="254" autocomplete="email" required />
+        <input class="sub-hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <input id="subscribe-submitted-at" name="submittedAt" type="hidden" />
         <button type="submit">Subscribe</button>
       </form>
       <p id="subscribe-status" class="sub-status" aria-live="polite"></p>
     </div>
     <div>
       <h4>EXPLORE</h4>
-      <ul><li><a href="#about">About</a></li><li><a href="#tour">Tour</a></li><li><a href="/partner">Partner</a></li></ul>
+      <ul><li><a href="#about">Why</a></li><li><a href="#tracks">Tracks</a></li><li><a href="#experience">Experience</a></li><li><a href="#shenzhen">Shenzhen</a></li><li><a href="#tour">Tour</a></li><li><a href="/speak-sponsor">Speak / Sponsor</a></li></ul>
     </div>
     <div>
       <h4>CONNECT</h4>
@@ -770,13 +1017,25 @@ const io = new IntersectionObserver((entries)=>{
   });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const scrollToHashTarget = () => {
+  const id = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : '';
+  const target = id ? document.getElementById(id) : null;
+  if (target) target.scrollIntoView({block: 'start', behavior: 'auto'});
+};
+window.addEventListener('load', () => [80, 360, 800].forEach(delay => setTimeout(scrollToHashTarget, delay)));
+window.addEventListener('hashchange', () => [40, 240].forEach(delay => setTimeout(scrollToHashTarget, delay)));
+setTimeout(scrollToHashTarget, 0);
 const subscribeForm = document.getElementById('subscribe-form');
 if (subscribeForm) {
+  const submittedAtInput = document.getElementById('subscribe-submitted-at');
+  if (submittedAtInput) submittedAtInput.value = String(Date.now());
   subscribeForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const emailInput = document.getElementById('subscribe-email');
     const status = document.getElementById('subscribe-status');
     const submitBtn = subscribeForm.querySelector('button[type="submit"]');
+    const website = subscribeForm.querySelector('input[name="website"]')?.value || '';
+    const submittedAt = Number(submittedAtInput?.value || Date.now());
     const email = emailInput?.value?.trim();
     if (!emailInput || !email || !emailInput.checkValidity()) return;
     const endpoint = window.GO_SUMMIT_SUBSCRIBE_ENDPOINT || '/api/subscribe';
@@ -787,7 +1046,7 @@ if (subscribeForm) {
         const res = await fetch(endpoint, {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({email, source: 'gosummit-web'})
+          body: JSON.stringify({email, website, submittedAt, source: 'gosummit-web'})
         });
         if (!res.ok) throw new Error(`subscribe failed: ${res.status}`);
         if (status) status.textContent = 'Subscribed. Welcome to GO Summit updates.';

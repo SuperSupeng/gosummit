@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /cities/shanghai-apr/
+Disallow: /cities/singapore-jun/
+Disallow: /cities/shanghai-jul/
+Disallow: /cities/hongkong-aug/
+Disallow: /cities/hangzhou-sep/
+Disallow: /cities/singapore-oct/
+Disallow: /cities/shenzhen-nov/
+Disallow: /cities/dubai-dec/
 
 Sitemap: https://gosummit.ai/sitemap.xml

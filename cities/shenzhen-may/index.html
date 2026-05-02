@@ -4,6 +4,18 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>GO SUMMIT · May 2026 · Shenzhen</title>
+<meta name="description" content="GO Summit Shenzhen May 2026 brings AI and hardware founders, operators, investors and supply-chain leaders together for the confirmed Shenzhen edition.">
+<link rel="canonical" href="https://gosummit.ai/cities/shenzhen-may/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GO Summit">
+<meta property="og:title" content="GO SUMMIT · May 2026 · Shenzhen">
+<meta property="og:description" content="GO Summit Shenzhen May 2026 brings AI and hardware founders, operators, investors and supply-chain leaders together for the confirmed Shenzhen edition.">
+<meta property="og:url" content="https://gosummit.ai/cities/shenzhen-may/">
+<meta property="og:image" content="https://gosummit.ai/assets/generated/og-go-summit.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GO SUMMIT · May 2026 · Shenzhen">
+<meta name="twitter:description" content="GO Summit Shenzhen May 2026 brings AI and hardware founders, operators, investors and supply-chain leaders together for the confirmed Shenzhen edition.">
+<meta name="twitter:image" content="https://gosummit.ai/assets/generated/og-go-summit.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -26,11 +38,12 @@ img{display:block;max-width:100%}
 .nav{position:fixed;top:0;left:0;right:0;z-index:60;backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);background:var(--glass);border-bottom:1px solid var(--line)}
 .nav-inner{width:80vw;margin:0 auto;padding:14px 0;display:flex;align-items:center;justify-content:space-between;font-size:14px}
 .wordmark{display:inline-flex;align-items:center;gap:10px}
-.wordmark-logo{display:block;width:210px;height:68px;background:var(--accent);-webkit-mask-image:url("/assets/go-summit-logo.png");-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;-webkit-mask-position:left center;-webkit-mask-mode:luminance;mask-image:url("/assets/go-summit-logo.png");mask-repeat:no-repeat;mask-size:contain;mask-position:left center;mask-mode:luminance;filter:drop-shadow(0 0 14px rgba(232,116,12,.26))}
+.wordmark-logo{display:block;width:210px;height:68px;background:url("/assets/generated/go-summit-logo-nav.png") no-repeat left center/contain;filter:drop-shadow(0 0 14px rgba(232,116,12,.26))}
 .wordmark .sep{display:inline-block;margin-left:10px;padding-left:12px;border-left:1px solid var(--line-2);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-dim);font-weight:500}
 .nav ul{display:flex;gap:30px;list-style:none;color:var(--fg-soft)}
 .nav ul a{font-size:14px;letter-spacing:.16em;text-transform:uppercase;transition:color .2s}
 .nav ul a.active,.nav ul a:hover{color:var(--fg)}
+section[id]{scroll-margin-top:92px}
 
 main{padding-top:96px}
 
@@ -61,17 +74,23 @@ main{padding-top:96px}
 .sec-head .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-dim);font-weight:500}
 
 /* AGENDA */
-.day{margin-bottom:50px}
-.day:last-child{margin-bottom:0}
-.day-head{display:flex;align-items:baseline;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:24px}
-.day-head h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.6vw,34px);letter-spacing:-.01em}
-.day-head .day-tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.timeline{list-style:none;display:flex;flex-direction:column}
-.timeline li{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:18px 0;border-bottom:1px solid var(--line)}
-.timeline li:last-child{border-bottom:0}
-.timeline .time{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:18px;padding-top:2px}
-.timeline strong{display:block;font-weight:500;font-size:17px;color:var(--fg);margin-bottom:4px}
-.timeline p{color:var(--fg-soft);font-size:14px;line-height:1.55}
+.overview-card,.session-card{background:rgba(255,255,255,.045);border:1px solid var(--line-2);border-radius:18px;padding:36px;margin-bottom:34px}
+.overview-table{display:grid;border-top:1px solid var(--line)}
+.overview-row{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
+.overview-row:last-child{border-bottom:0}
+.overview-row strong{font-weight:700;font-size:22px;line-height:1.25;color:var(--fg)}
+.overview-row span{color:var(--fg);font-size:20px;line-height:1.45}
+.overview-labels{display:grid;grid-template-columns:220px 1fr;gap:28px;margin-bottom:16px}
+.overview-labels span{display:inline-flex;justify-content:center;width:max-content;min-width:86px;padding:6px 20px;border-radius:999px;background:rgba(232,116,12,.28);color:#ff8a4a;font-size:18px;font-weight:700}
+.session-block{position:relative;padding:12px 0 56px 22px;margin-left:4px}
+.session-block:last-child{padding-bottom:0}
+.session-block h3{font-family:var(--sans);font-weight:700;color:#ff7945;font-size:26px;line-height:1.3;margin-bottom:6px}
+.session-block h3 span{display:block;margin-top:4px}
+.session-focus{color:var(--fg-dim);font-size:17px;line-height:1.5;margin-bottom:22px}
+.session-list{list-style:none;position:relative;display:grid;gap:22px}
+.session-list::before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:2px;background:rgba(255,255,255,.16)}
+.session-list li{position:relative;padding-left:32px;color:var(--fg);font-size:20px;line-height:1.55}
+.session-list li::before{content:"";position:absolute;left:-5px;top:.75em;width:12px;height:12px;border-radius:50%;background:#ff7945;box-shadow:0 0 0 4px rgba(255,121,69,.08)}
 
 /* SPEAKERS */
 .sp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
@@ -88,6 +107,8 @@ main{padding-top:96px}
 .stop-card{padding:28px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px;transition:background .25s,color .25s;color:var(--fg-soft)}
 .stop-card:nth-child(4n){border-right:0}
 .stop-card:hover{background:rgba(232,116,12,.06);color:var(--fg)}
+.stop-card.disabled{cursor:default;pointer-events:none;opacity:.72}
+.stop-card.disabled:hover{background:transparent;color:var(--fg-soft)}
 .stop-card .month{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--accent)}
 .stop-card .city{font-family:var(--serif);font-size:28px;letter-spacing:-.01em;color:inherit}
 .stop-card .arrow{margin-top:8px;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
@@ -118,9 +139,17 @@ footer{padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
 }
 @media (max-width:600px){
   :root{--gutter:6vw}
+  section[id]{scroll-margin-top:86px}
   .city-hero{padding:50px var(--gutter) 60px}
   .sec{padding:70px var(--gutter)}
-  .timeline li{grid-template-columns:80px 1fr;gap:18px}
+  .overview-card,.session-card{padding:24px;border-radius:14px}
+  .overview-labels{display:none}
+  .overview-row{grid-template-columns:1fr;gap:8px}
+  .overview-row strong{font-size:19px}
+  .overview-row span{font-size:17px}
+  .session-block{padding-left:0}
+  .session-block h3{font-size:22px}
+  .session-list li{font-size:17px;line-height:1.55}
   .sp-grid,.stops-grid{grid-template-columns:1fr}
   .sp-card,.stop-card{border-right:0!important}
   .f-grid{grid-template-columns:1fr}
@@ -134,10 +163,11 @@ footer{padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
   <div class="nav-inner">
     <a href="/" class="wordmark" aria-label="GO Summit"><span class="wordmark-logo" aria-hidden="true"></span><span class="sep">WORLD TOUR 2026-2027</span></a>
     <ul>
-      <li><a href="/#about">ABOUT</a></li>
-      <li><a class="active" href="/#tour">TOUR</a></li>
-      <li><a href="/partner">PARTNER</a></li>
-      <li><a href="/contact">CONTACT</a></li>
+      <li><a href="#overview">OVERVIEW</a></li>
+      <li><a class="active" href="#agenda">AGENDA</a></li>
+      <li><a href="#speakers">SPEAKERS</a></li>
+      <li><a href="#next-stops">TOUR</a></li>
+      <li><a href="/speak-sponsor">SPEAK / SPONSOR</a></li>
     </ul>
   </div>
 </nav>
@@ -146,58 +176,74 @@ footer{padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
 
 <!-- HERO -->
 <section class="city-hero">
-  <div class="kicker">May 2026 · Stop 02 of 09</div>
+  <div class="kicker">May 23, 2026 · Confirmed Shenzhen edition</div>
   <h1>Shenzhen</h1>
-  <p class="tagline">Inside the city that builds the world's robotics, EV and embodied-AI hardware — two days with the founders, factories and capital actually shipping it.</p>
+  <p class="tagline">From Shenzhen to the World — a one-day forum for AI and hardware founders building products, supply chains and go-to-market paths for global expansion.</p>
 
   <div class="city-meta">
-    <div><b>2 days</b><span>format</span></div>
-    <div><b>~200</b><span>attendees</span></div>
+    <div><b>GO Summit × Shenzhen Edition</b><span>event</span></div>
+    <div><b>AI and hardware founders</b><span>audience</span></div>
     <div><b>May 23, 2026</b><span>date</span></div>
     <div><b>The Westin Shenzhen Nanshan</b><span>venue</span></div>
   </div>
 
   <div class="cta-row">
     <a class="btn primary" href="mailto:info@agivilla.com?subject=Notify%20me%20%E2%80%94%20Shenzhen%20%28May%202026%29&body=Hi%20GO%20Summit%20team%2C%0A%0APlease%20notify%20me%20when%20registration%20opens%20for%20GO%20SUMMIT%20Shenzhen%20%28May%202026%29.%0A%0AName%3A%0ATitle%20%2F%20Company%3A%0AEmail%3A%0A%0AThanks%2C">Notify me when registration opens →</a>
-    <a class="btn ghost" href="/partner">Sponsor or speak at this stop</a>
+    <a class="btn ghost" href="/speak-sponsor">Sponsor or speak at this stop</a>
   </div>
 </section>
 
 <!-- AGENDA -->
+<section class="sec" id="overview">
+  <div class="sec-head">
+    <h2>Event <em>overview.</em></h2>
+    <span class="eyebrow">Confirmed Shenzhen edition</span>
+  </div>
+
+  <div class="overview-card">
+    <div class="overview-labels"><span>Item</span><span>Details</span></div>
+    <div class="overview-table">
+      <div class="overview-row"><strong>Event Name</strong><span>GO Summit × Shenzhen Edition</span></div>
+      <div class="overview-row"><strong>Theme</strong><span>From Shenzhen to the World — Hardware Going Global &amp; a New Globalization Paradigm</span></div>
+      <div class="overview-row"><strong>Date</strong><span>Saturday, May 23, 2026</span></div>
+      <div class="overview-row"><strong>Audience</strong><span>AI and hardware founders, supply-chain leaders, cross-border sellers, AI/robotics teams, hardware-focused investors</span></div>
+      <div class="overview-row"><strong>Morning Session</strong><span>Global Forum&nbsp;&nbsp;|&nbsp;&nbsp;10:00 - 12:30&nbsp;&nbsp;|&nbsp;&nbsp;English</span></div>
+      <div class="overview-row"><strong>Afternoon Session</strong><span>Go Global Forum&nbsp;&nbsp;|&nbsp;&nbsp;14:00 - 18:00&nbsp;&nbsp;|&nbsp;&nbsp;Chinese</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="agenda">
   <div class="sec-head">
-    <h2>Agenda <em>· two days, end to end</em></h2>
-    <span class="eyebrow">Provisional · subject to refinement</span>
+    <h2>Agenda <em>details.</em></h2>
+    <span class="eyebrow">Global Forum + Go Global Forum</span>
   </div>
 
-  <div class="day">
-    <div class="day-head">
-      <span class="day-tag">Day 1</span>
-      <h3>Industry Tour</h3>
+  <div class="session-card">
+    <div class="session-block">
+      <h3>Morning — Global Forum <span>(10:00 - 12:30 · English Session)</span></h3>
+      <p class="session-focus">Focus: Global AI entrepreneurship · Tech innovation · New opportunities for going global</p>
+      <ul class="session-list">
+        <li>Why the World Is Watching China's Next Wave</li>
+        <li>Breaking into Europe: What Chinese AI Founders Need to Know About GTM, Partnerships and Cultural Trust</li>
+        <li>Day 0 Global: How AI Startups Win the World from Day One</li>
+        <li>Global Equity Structure Design and Tariff Compliance Breakdown</li>
+      </ul>
     </div>
-    <ul class="timeline">
-      <li><span class="time">09:30</span><div><strong>Welcome briefing</strong><p>Cohort intro, tour logistics, the stories behind the companies you're about to meet.</p></div></li>
-      <li><span class="time">10:00</span><div><strong>Hosted tour 01 · Embodied AI / Robotics</strong><p>On-site walkthrough with the founder and engineering lead. Closed-door Q&amp;A.</p></div></li>
-      <li><span class="time">12:30</span><div><strong>Lunch &amp; open networking</strong><p>Founder-to-founder unstructured time on-site.</p></div></li>
-      <li><span class="time">14:30</span><div><strong>Hosted tour 02 · Advanced manufacturing / EV supply chain</strong><p>Inside one of Shenzhen's anchor hardware ecosystems.</p></div></li>
-      <li><span class="time">17:30</span><div><strong>Tour wrap-up</strong><p>Debrief, day-2 priming, optional walking dinner.</p></div></li>
-    </ul>
-  </div>
 
-  <div class="day">
-    <div class="day-head">
-      <span class="day-tag">Day 2</span>
-      <h3>Summit</h3>
+    <div class="session-block">
+      <h3>Afternoon — Go Global Forum <span>(14:00 - 18:00 · Chinese Session)</span></h3>
+      <p class="session-focus">Focus: Geopolitical insights for going global · Hardware globalization · Growth in practice</p>
+      <ul class="session-list">
+        <li>AI-Native Talk Show</li>
+        <li>2026 Geopolitical Trends and Outbound Expansion Insights</li>
+        <li>Over $800K in Crowdfunding in One Year, Tens of Millions in Financing, Mass Production and Shipment — Reflections on the Tennis Robot Startup Journey</li>
+        <li>A User Insight Arsenal for China's Hardware Tech Entrepreneurs</li>
+        <li>How to Be an Effective Product-Minded CEO</li>
+        <li>AI Hardware Global Expansion: The Next Big Opportunity</li>
+        <li>AI Agent &amp; AIGC Automated Workflows: Influence on Traditional Industries</li>
+      </ul>
     </div>
-    <ul class="timeline">
-      <li><span class="time">09:00</span><div><strong>Opening keynote</strong><p>One operator's read on where the next global category gets built.</p></div></li>
-      <li><span class="time">10:00</span><div><strong>Founder panel · Building from China, with the world</strong><p>Three founders, one moderator. No slides, just operator depth.</p></div></li>
-      <li><span class="time">11:30</span><div><strong>Closed-door founder roundtable</strong><p>Invite-only. 12 founders, one topic, Chatham House rule.</p></div></li>
-      <li><span class="time">13:00</span><div><strong>Lunch</strong></div></li>
-      <li><span class="time">14:30</span><div><strong>Investor matchmaking</strong><p>Curated 1:1 conversations with funds active in this market.</p></div></li>
-      <li><span class="time">16:30</span><div><strong>Policy &amp; market briefing</strong><p>Short, high-density read on what's actually changing.</p></div></li>
-      <li><span class="time">19:30</span><div><strong>Signature evening salon</strong><p>The conversation continues — small group, long form.</p></div></li>
-    </ul>
   </div>
 </section>
 
@@ -236,17 +282,17 @@ footer{padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
 <section class="sec" id="next-stops">
   <div class="sec-head">
     <h2>The rest of the <em>tour.</em></h2>
-    <span class="eyebrow">Nine cities · twelve months</span>
+    <span class="eyebrow">Additional stops · coming soon</span>
   </div>
   <div class="stops-grid">
-    <a class="stop-card" href="/cities/shanghai-apr/"><span class="month">April · Opener</span><span class="city">Shanghai</span><span class="arrow">View →</span></a>
-    <a class="stop-card" href="/cities/singapore-jun/"><span class="month">June</span><span class="city">Singapore</span><span class="arrow">View →</span></a>
-    <a class="stop-card" href="/cities/shanghai-jul/"><span class="month">July · WAIC</span><span class="city">Shanghai</span><span class="arrow">View →</span></a>
-    <a class="stop-card" href="/cities/hongkong-aug/"><span class="month">August</span><span class="city">Hongkong</span><span class="arrow">View →</span></a>
-    <a class="stop-card" href="/cities/hangzhou-sep/"><span class="month">September</span><span class="city">Hangzhou</span><span class="arrow">View →</span></a>
-    <a class="stop-card" href="/cities/singapore-oct/"><span class="month">October</span><span class="city">Singapore</span><span class="arrow">View →</span></a>
-    <a class="stop-card" href="/cities/shenzhen-nov/"><span class="month">November</span><span class="city">Shenzhen</span><span class="arrow">View →</span></a>
-    <a class="stop-card" href="/cities/dubai-dec/"><span class="month">December · Flagship</span><span class="city">Dubai</span><span class="arrow">View →</span></a>
+    <div class="stop-card disabled" aria-disabled="true"><span class="month">April · Opener</span><span class="city">Shanghai</span><span class="arrow">Coming soon</span></div>
+    <div class="stop-card disabled" aria-disabled="true"><span class="month">June</span><span class="city">Singapore</span><span class="arrow">Coming soon</span></div>
+    <div class="stop-card disabled" aria-disabled="true"><span class="month">July · WAIC</span><span class="city">Shanghai</span><span class="arrow">Coming soon</span></div>
+    <div class="stop-card disabled" aria-disabled="true"><span class="month">August</span><span class="city">Hong Kong</span><span class="arrow">Coming soon</span></div>
+    <div class="stop-card disabled" aria-disabled="true"><span class="month">September</span><span class="city">Hangzhou</span><span class="arrow">Coming soon</span></div>
+    <div class="stop-card disabled" aria-disabled="true"><span class="month">October</span><span class="city">Singapore</span><span class="arrow">Coming soon</span></div>
+    <div class="stop-card disabled" aria-disabled="true"><span class="month">November</span><span class="city">Shenzhen</span><span class="arrow">Coming soon</span></div>
+    <div class="stop-card disabled" aria-disabled="true"><span class="month">December</span><span class="city">Dubai</span><span class="arrow">Coming soon</span></div>
   </div>
 </section>
 
@@ -257,16 +303,16 @@ footer{padding:60px var(--gutter) 40px;color:var(--fg-dim);font-size:13px}
   <div class="f-grid">
     <div>
       <h4 style="margin-bottom:14px">GO SUMMIT</h4>
-      <p class="sub">Monthly, in a different city. Build the next global category, with the people actually doing it.</p>
+      <p class="sub">A curated AI and hardware globalization summit tour across China, Asia and global markets.</p>
       <p class="org-ref">Organized by AGI Villa · 2026</p>
-      <a class="partner-cta" href="/partner">Want to partner with us? <span>→</span></a>
+      <a class="partner-cta" href="/speak-sponsor">Want to speak or sponsor? <span>→</span></a>
     </div>
     <div>
       <h4>EXPLORE</h4>
       <ul>
         <li><a href="/#about">About</a></li>
         <li><a href="/#tour">Tour</a></li>
-        <li><a href="/partner">Partner</a></li>
+        <li><a href="/speak-sponsor">Speak / Sponsor</a></li>
       </ul>
     </div>
     <div>
